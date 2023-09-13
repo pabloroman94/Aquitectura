@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  Customer.api:
+    image: ${DOCKER_REGISTRY-}Customerapi
+    build:
+      context: .
+      dockerfile: PARK.Customer/Customer.Api/Dockerfile

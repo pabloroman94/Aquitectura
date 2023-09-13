@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\**" />
+    <Compile Remove="Utils\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="Utils\**" />
+    <None Remove="Services\**" />
+    <None Remove="Utils\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Aplications\BonusAplication.cs" />
+    <Compile Remove="Aplications\BonusRuleAplication.cs" />
+    <Compile Remove="Aplications\BonusRuleTransactionAplication.cs" />
+    <Compile Remove="Aplications\ParameterBonusRuleAplication.cs" />
+    <Compile Remove="Aplications\RateAplication.cs" />
+    <Compile Remove="Aplications\RateRuleAplication.cs" />
+    <Compile Remove="Aplications\RateRuleParkingLotAplication.cs" />
+    <Compile Remove="Aplications\ToleranceAplication.cs" />
+    <Compile Remove="Specifications\BonusByParkingLotIdSpecification.cs" />
+    <Compile Remove="Specifications\BonusRuleByParkingLotIdSpecification.cs" />
+    <Compile Remove="Specifications\RateByParkingLotAndVehicleTypeSpecification.cs" />
+    <Compile Remove="Specifications\RateRuleByParkingLotAndVehicleTypeSpecification.cs" />
+    <Compile Remove="Specifications\ToleranceByParkingLotIdSpecification.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Customer.Domain\Customer.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

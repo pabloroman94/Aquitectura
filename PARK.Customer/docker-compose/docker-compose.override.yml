@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  Customer.api:
+    container_name: park-Customer.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - TZ=America/Argentina/Buenos_Aires
+    ports:
+      - "8000:80"
+      - "8001:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro

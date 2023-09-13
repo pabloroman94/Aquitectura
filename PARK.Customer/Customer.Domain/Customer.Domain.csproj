@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\Bonus.cs" />
+    <Compile Remove="Entities\BonusRule.cs" />
+    <Compile Remove="Entities\BonusRuleTransaction.cs" />
+    <Compile Remove="Entities\Filters\BonusFilter.cs" />
+    <Compile Remove="Entities\Filters\BonusRuleFilter.cs" />
+    <Compile Remove="Entities\Filters\BonusRuleTransactionFilter.cs" />
+    <Compile Remove="Entities\Filters\ParameterBonusRuleFilter.cs" />
+    <Compile Remove="Entities\Filters\RateFilter.cs" />
+    <Compile Remove="Entities\Filters\RateRuleFilter.cs" />
+    <Compile Remove="Entities\Filters\RateRuleParkingLotFilter.cs" />
+    <Compile Remove="Entities\Filters\ToleranceFilter.cs" />
+    <Compile Remove="Entities\ParameterBonusRule.cs" />
+    <Compile Remove="Entities\ProductCodeType.cs" />
+    <Compile Remove="Entities\ProductPrice.cs" />
+    <Compile Remove="Entities\Rate.cs" />
+    <Compile Remove="Entities\RateRule.cs" />
+    <Compile Remove="Entities\RateRuleParkingLot.cs" />
+    <Compile Remove="Entities\Tolerance.cs" />
+    <Compile Remove="Interfaces\Aplication\IBonusAplication.cs" />
+    <Compile Remove="Interfaces\Aplication\IBonusRuleAplication.cs" />
+    <Compile Remove="Interfaces\Aplication\IRateAplication.cs" />
+    <Compile Remove="Interfaces\Aplication\IRateRuleAplication.cs" />
+    <Compile Remove="Interfaces\Aplication\IRateRuleParkingLotAplication.cs" />
+    <Compile Remove="Interfaces\Aplication\ITorelanceAplication.cs" />
+    <Compile Remove="Interfaces\Infraestructure.Data\IBonusRepository.cs" />
+    <Compile Remove="Interfaces\Infraestructure.Data\IBonusRuleRepository.cs" />
+    <Compile Remove="Interfaces\Infraestructure.Data\IBonusRuleTransactionRepository.cs" />
+    <Compile Remove="Interfaces\Infraestructure.Data\IParameterBonusRuleRepository.cs" />
+    <Compile Remove="Interfaces\Infraestructure.Data\IRateRepository.cs" />
+    <Compile Remove="Interfaces\Infraestructure.Data\IRateRuleParkingLotRepository.cs" />
+    <Compile Remove="Interfaces\Infraestructure.Data\IRateRuleRepository.cs" />
+    <Compile Remove="Interfaces\Infraestructure.Data\IToleranceRepository.cs" />
+  </ItemGroup>
+
+</Project>
