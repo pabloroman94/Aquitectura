@@ -1,10 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>Domain</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Remove="Entities\Bonus.cs" />
     <Compile Remove="Entities\BonusRule.cs" />
@@ -39,5 +37,4 @@
     <Compile Remove="Interfaces\Infraestructure.Data\IRateRuleRepository.cs" />
     <Compile Remove="Interfaces\Infraestructure.Data\IToleranceRepository.cs" />
   </ItemGroup>
-
 </Project>

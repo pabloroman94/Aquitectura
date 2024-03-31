@@ -1,72 +1,65 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
-		<RootNamespace>Infrastructure.Data</RootNamespace>
-	</PropertyGroup>
-
-	<ItemGroup>
-	  <Compile Remove="Dapper\Entities\BonusEntity.cs" />
-	  <Compile Remove="Dapper\Entities\BonusRuleEntity.cs" />
-	  <Compile Remove="Dapper\Entities\BonusRuleTransactionEntity.cs" />
-	  <Compile Remove="Dapper\Entities\ParameterBonusRuleEntity.cs" />
-	  <Compile Remove="Dapper\Entities\ProductCodeTypeEntity.cs" />
-	  <Compile Remove="Dapper\Entities\ProductPriceEntity.cs" />
-	  <Compile Remove="Dapper\Entities\RateEntity.cs" />
-	  <Compile Remove="Dapper\Entities\RateRuleEntity.cs" />
-	  <Compile Remove="Dapper\Entities\RateRuleParkingLotEntity.cs" />
-	  <Compile Remove="Dapper\Entities\ToleranceEntity.cs" />
-	  <Compile Remove="Dapper\Mappers\BonusMap.cs" />
-	  <Compile Remove="Dapper\Mappers\BonusRuleMap.cs.cs" />
-	  <Compile Remove="Dapper\Mappers\BonusRuleTransactionMap.cs" />
-	  <Compile Remove="Dapper\Mappers\Interfaces\IBonusMap.cs" />
-	  <Compile Remove="Dapper\Mappers\Interfaces\IBonusRuleMap.cs" />
-	  <Compile Remove="Dapper\Mappers\Interfaces\IBonusRuleTransactionMap.cs" />
-	  <Compile Remove="Dapper\Mappers\Interfaces\IParameterBonusRuleMap.cs" />
-	  <Compile Remove="Dapper\Mappers\Interfaces\IRateMap.cs" />
-	  <Compile Remove="Dapper\Mappers\Interfaces\IRateRuleMap.cs" />
-	  <Compile Remove="Dapper\Mappers\Interfaces\IRateRuleParkingLotMap.cs" />
-	  <Compile Remove="Dapper\Mappers\Interfaces\IToleranceMap.cs" />
-	  <Compile Remove="Dapper\Mappers\ParameterBonusRuleMap.cs" />
-	  <Compile Remove="Dapper\Mappers\RateMap.cs" />
-	  <Compile Remove="Dapper\Mappers\RateRuleMap.cs" />
-	  <Compile Remove="Dapper\Mappers\RateRuleParkingLotMap.cs" />
-	  <Compile Remove="Dapper\Mappers\ToleranceMap.cs" />
-	  <Compile Remove="Dapper\Repository\BonusRepository.cs" />
-	  <Compile Remove="Dapper\Repository\BonusRuleRepository.cs" />
-	  <Compile Remove="Dapper\Repository\BonusRuleTransactionRepository.cs" />
-	  <Compile Remove="Dapper\Repository\ParameterBonusRuleRepository.cs" />
-	  <Compile Remove="Dapper\Repository\RateRepository.cs" />
-	  <Compile Remove="Dapper\Repository\RateRuleParkingLotRepository.cs" />
-	  <Compile Remove="Dapper\Repository\RateRuleRepository.cs" />
-	  <Compile Remove="Dapper\Repository\ToleranceRepository.cs" />
-	  <Compile Remove="EF\Configurations\BonusConfiguration.cs" />
-	  <Compile Remove="EF\Configurations\BonusRuleConfiguration.cs" />
-	  <Compile Remove="EF\Configurations\BonusRuleTransactionConfiguration.cs" />
-	  <Compile Remove="EF\Configurations\ParameterBonusRuleConfiguration.cs" />
-	  <Compile Remove="EF\Configurations\RateConfiguration.cs" />
-	  <Compile Remove="EF\Configurations\RateRuleConfiguration.cs" />
-	  <Compile Remove="EF\Configurations\RateRuleParkingLotConfiguration.cs" />
-	  <Compile Remove="EF\Configurations\ToleranceConfiguration.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Infrastructure.Data</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Dapper\Entities\BonusEntity.cs" />
+    <Compile Remove="Dapper\Entities\BonusRuleEntity.cs" />
+    <Compile Remove="Dapper\Entities\BonusRuleTransactionEntity.cs" />
+    <Compile Remove="Dapper\Entities\ParameterBonusRuleEntity.cs" />
+    <Compile Remove="Dapper\Entities\ProductCodeTypeEntity.cs" />
+    <Compile Remove="Dapper\Entities\ProductPriceEntity.cs" />
+    <Compile Remove="Dapper\Entities\RateEntity.cs" />
+    <Compile Remove="Dapper\Entities\RateRuleEntity.cs" />
+    <Compile Remove="Dapper\Entities\RateRuleParkingLotEntity.cs" />
+    <Compile Remove="Dapper\Entities\ToleranceEntity.cs" />
+    <Compile Remove="Dapper\Mappers\BonusMap.cs" />
+    <Compile Remove="Dapper\Mappers\BonusRuleMap.cs.cs" />
+    <Compile Remove="Dapper\Mappers\BonusRuleTransactionMap.cs" />
+    <Compile Remove="Dapper\Mappers\Interfaces\IBonusMap.cs" />
+    <Compile Remove="Dapper\Mappers\Interfaces\IBonusRuleMap.cs" />
+    <Compile Remove="Dapper\Mappers\Interfaces\IBonusRuleTransactionMap.cs" />
+    <Compile Remove="Dapper\Mappers\Interfaces\IParameterBonusRuleMap.cs" />
+    <Compile Remove="Dapper\Mappers\Interfaces\IRateMap.cs" />
+    <Compile Remove="Dapper\Mappers\Interfaces\IRateRuleMap.cs" />
+    <Compile Remove="Dapper\Mappers\Interfaces\IRateRuleParkingLotMap.cs" />
+    <Compile Remove="Dapper\Mappers\Interfaces\IToleranceMap.cs" />
+    <Compile Remove="Dapper\Mappers\ParameterBonusRuleMap.cs" />
+    <Compile Remove="Dapper\Mappers\RateMap.cs" />
+    <Compile Remove="Dapper\Mappers\RateRuleMap.cs" />
+    <Compile Remove="Dapper\Mappers\RateRuleParkingLotMap.cs" />
+    <Compile Remove="Dapper\Mappers\ToleranceMap.cs" />
+    <Compile Remove="Dapper\Repository\BonusRepository.cs" />
+    <Compile Remove="Dapper\Repository\BonusRuleRepository.cs" />
+    <Compile Remove="Dapper\Repository\BonusRuleTransactionRepository.cs" />
+    <Compile Remove="Dapper\Repository\ParameterBonusRuleRepository.cs" />
+    <Compile Remove="Dapper\Repository\RateRepository.cs" />
+    <Compile Remove="Dapper\Repository\RateRuleParkingLotRepository.cs" />
+    <Compile Remove="Dapper\Repository\RateRuleRepository.cs" />
+    <Compile Remove="Dapper\Repository\ToleranceRepository.cs" />
+    <Compile Remove="EF\Configurations\BonusConfiguration.cs" />
+    <Compile Remove="EF\Configurations\BonusRuleConfiguration.cs" />
+    <Compile Remove="EF\Configurations\BonusRuleTransactionConfiguration.cs" />
+    <Compile Remove="EF\Configurations\ParameterBonusRuleConfiguration.cs" />
+    <Compile Remove="EF\Configurations\RateConfiguration.cs" />
+    <Compile Remove="EF\Configurations\RateRuleConfiguration.cs" />
+    <Compile Remove="EF\Configurations\RateRuleParkingLotConfiguration.cs" />
+    <Compile Remove="EF\Configurations\ToleranceConfiguration.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
     <PackageReference Include="Dapper.FluentMap" Version="2.0.0" />
     <PackageReference Include="Devart.Data.Oracle" Version="9.16.1434" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
     <PackageReference Include="Oracle.EntityFrameworkCore" Version="6.21.61" />
-    <PackageReference Include="System.Data.Odbc" Version="6.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\Customer.Domain\Customer.Domain.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Dapper\Repository\" />
-	</ItemGroup>
-
+    <PackageReference Include="System.Data.Odbc" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Customer.Domain\Customer.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dapper\Repository\" />
+  </ItemGroup>
 </Project>

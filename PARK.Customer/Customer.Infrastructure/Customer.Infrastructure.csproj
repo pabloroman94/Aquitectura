@@ -1,18 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>Customer.Infrastructure</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Remove="Person\**" />
     <EmbeddedResource Remove="Person\**" />
     <None Remove="Person\**" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Customer.Domain\Customer.Domain.csproj" />
   </ItemGroup>
-
 </Project>
