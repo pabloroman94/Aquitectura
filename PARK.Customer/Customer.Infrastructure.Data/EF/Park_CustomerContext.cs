@@ -9,6 +9,7 @@ namespace Infrastructure.Data.EF
         public Park_CustomerContext(DbContextOptions<Park_CustomerContext> options)
             : base(options)
         { }
+
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Photo> CustomerPhotos { get; set; }
         public virtual DbSet<Mail> CustomerMails { get; set; }
@@ -23,15 +24,6 @@ namespace Infrastructure.Data.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-            if (Database.IsOracle())
-            {   //If you need, manually add a Schema name, if you don't need a schema name before the default, you don't need to configure it.
-                //modelBuilder.HasDefaultSchema("EVMS");//If you use Oracle, you must manually add Schema, it is judged that the current database is Oracle to manually add Schema (DBA supplied database account name)
-
-                //If you use Oracle, you must manually add Schema, it is judged that the current database is Oracle to manually add Schema (DBA supplied database account name)
-                modelBuilder.HasDefaultSchema("PARK");//Notice: DBA providedDatabase account name, must be capitalized
-            }
-
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }

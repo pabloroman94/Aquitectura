@@ -1,55 +1,50 @@
 ﻿using Dapper;
-using Devart.Data.Oracle;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using MySql.Data.MySqlClient;
 
 namespace Infrastructure.Dapper.Entities
 {
-    public class OracleDynamicParameters : SqlMapper.IDynamicParameters
+    public class MySqlDynamicParameters : SqlMapper.IDynamicParameters
     {
         private readonly DynamicParameters _dynamicParameters = new DynamicParameters();
-
-        private readonly List<Devart.Data.Oracle.OracleParameter> _oracleParameters = new List<Devart.Data.Oracle.OracleParameter>();
+        private readonly List<MySql.Data.MySqlClient.MySqlParameter> _mySqlParameters = new List<MySql.Data.MySqlClient.MySqlParameter>();
 
         public void Add(string name, object value = null, DbType dbType = DbType.AnsiString, ParameterDirection? direction = null, int? size = null)
         {
             _dynamicParameters.Add(name, value, dbType, direction, size);
         }
 
-        public void Add(string name, OracleType oracleDbType, ParameterDirection direction)
+        public void Add(string name, MySql.Data.MySqlClient.MySqlDbType mySqlDbType, ParameterDirection direction)
         {
-            var oracleParameter = new Devart.Data.Oracle.OracleParameter(name, oracleDbType) { Direction = direction };
-            _oracleParameters.Add(oracleParameter);
+            var mySqlParameter = new MySql.Data.MySqlClient.MySqlParameter(name, mySqlDbType) { Direction = direction };
+            _mySqlParameters.Add(mySqlParameter);
         }
 
-        public void Add(string name, Devart.Data.Oracle.OracleDbType oracleDbType, int size, ParameterDirection direction)
+        public void Add(string name, MySql.Data.MySqlClient.MySqlDbType mySqlDbType, int size, ParameterDirection direction)
         {
-            var oracleParameter = new Devart.Data.Oracle.OracleParameter(name, oracleDbType, size) { Direction = direction };
-            _oracleParameters.Add(oracleParameter);
-        }
-
-        internal object Add(string v, Oracle.ManagedDataAccess.Client.OracleDbType blob, int length)
-        {
-            throw new NotImplementedException();
+            var mySqlParameter = new MySql.Data.MySqlClient.MySqlParameter(name, mySqlDbType, size) { Direction = direction };
+            _mySqlParameters.Add(mySqlParameter);
         }
 
         public void AddParameters(IDbCommand command, SqlMapper.Identity identity)
         {
             ((SqlMapper.IDynamicParameters)_dynamicParameters).AddParameters(command, identity);
 
-            var oracleCommand = command as Devart.Data.Oracle.OracleCommand;
+            var mySqlCommand = command as MySql.Data.MySqlClient.MySqlCommand;
 
-            if (oracleCommand != null)
+            if (mySqlCommand != null)
             {
-                oracleCommand.Parameters.AddRange(_oracleParameters.ToArray());
+                mySqlCommand.Parameters.AddRange(_mySqlParameters.ToArray());
             }
         }
 
         public T Get<T>(string parameterName)
         {
-            var parameter = _oracleParameters.SingleOrDefault(t => t.ParameterName == parameterName);
+            var parameter = _mySqlParameters.SingleOrDefault(t => t.ParameterName == parameterName);
             if (parameter != null)
                 return (T)Convert.ChangeType(parameter.Value, typeof(T));
             return default(T);
@@ -57,7 +52,7 @@ namespace Infrastructure.Dapper.Entities
 
         public T Get<T>(int index)
         {
-            var parameter = _oracleParameters[index];
+            var parameter = _mySqlParameters[index];
             if (parameter != null)
                 return (T)Convert.ChangeType(parameter.Value, typeof(T));
             return default(T);
@@ -75,7 +70,7 @@ namespace Infrastructure.Dapper.Entities
         {
             if (IsFixedLength && Length == -1)
             {
-                throw new InvalidOperationException("If specifying IsFixedLength,  a Length must also be specified");
+                throw new InvalidOperationException("If specifying IsFixedLength, a Length must also be specified");
             }
             var param = command.CreateParameter();
             param.ParameterName = name;
