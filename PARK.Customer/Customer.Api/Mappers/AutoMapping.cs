@@ -9,8 +9,7 @@ namespace PARK.CustomerApi.Mappers
     {
         public AutoMapping()
         {
-            CreateMap<CustomerModel,  Domain.Entities.Customer> ().ReverseMap();
-            CreateMap<PersonModel, Domain.Entities.Person>().ReverseMap();
+            //CreateMap<CustomerModel,  Domain.Entities.Customer> ().ReverseMap();
             CreateMap<Domain.Entities.Person, PersonModel>().ReverseMap();
             CreateMap<CompanyModel, Domain.Entities.Company>().ReverseMap();
             CreateMap<PhotoModel, Domain.Entities.Photo>().ReverseMap();
@@ -21,6 +20,11 @@ namespace PARK.CustomerApi.Mappers
             CreateMap<ContactTypeModel, Domain.Entities.ContactType>().ReverseMap();
             CreateMap<GenderModel, Domain.Entities.Gender>().ReverseMap();
             CreateMap<CompanyContactPersonModel, Domain.Entities.CompanyContactPerson>().ReverseMap();
+            CreateMap<UserEmailModel, Domain.Entities.UserEmail>().ReverseMap();
+            CreateMap<UserPhotoModel, Domain.Entities.UserPhoto>().ReverseMap();
+            CreateMap<UserModel, Domain.Entities.User>().ReverseMap();
+            CreateMap<PersonModel, Domain.Entities.Person>().ReverseMap();
+            CreateMap<UserPersonModel, Domain.Entities.UserPerson>().ReverseMap();
 
 
             CreateMap<Address, Person>().ReverseMap()

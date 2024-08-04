@@ -18,7 +18,7 @@ namespace PARK.CustomerApi.Models
         /// <summary>
         /// Usuario que inserto el registro
         /// </summary>
-        ///  <example> EROMANCZUK </example>
+        ///  <example> RPablo </example>
         public string UserName { get; set; }
 
         ///
@@ -41,7 +41,7 @@ namespace PARK.CustomerApi.Models
         /// Usuario que  actualizo por ultima vez el registro
         /// 
         /// </summary>
-        /// /// <example> VFLORES</example>
+        /// /// <example> RPablo</example>
         public string? UserNameUpdate { get; set; }
     }
 }

@@ -40,7 +40,7 @@ namespace PARK.CustomerApi.Models.SeedWork
         /// <summary>
         /// Usuario que inserto el registro
         /// </summary>
-        /// <example>KiwiSistemas</example>
+        /// <example>RPablo</example>
         public string UserName { get; set; }
 
 
@@ -56,7 +56,7 @@ namespace PARK.CustomerApi.Models.SeedWork
         /// <summary>
         /// Usuario que actualizo el registro
         /// </summary>
-        /// <example>VFlores</example>
+        /// <example>RPablo</example>
         public string? UserNameUpdate { get; set; }
 
     }

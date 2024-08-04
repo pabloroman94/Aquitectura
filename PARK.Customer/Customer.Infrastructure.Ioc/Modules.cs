@@ -37,6 +37,10 @@ namespace Customer.Infrastructure.Ioc
             services.AddScoped<IBaseStampAplication<Domain.Entities.Gender, Guid, GenderFilter>, GenderAplication>();
             services.AddScoped<IBaseStampAplication<DocumentType, Guid, DocumentTypeFilter>, DocumentTypeAplication>();
             services.AddScoped<IBaseStampAplication<CompanyContactPerson, Guid, CompanyContactPersonFilter>, CompanyContactPersonAplication>();
+            services.AddScoped<IBaseStampAplication<UserEmail, Guid, UserEmailFilter>, UserEmailAplication>();
+            services.AddScoped<IBaseStampAplication<User, Guid, UserFilter>, UserAplication>();
+            services.AddScoped<IBaseStampAplication<Domain.Entities.UserPhoto, Guid, UserPhotoFilter>, UserPhotoAplication>();
+            services.AddScoped<IBaseStampAplication<Domain.Entities.UserPerson, Guid, UserPersonFilter>, UserPersonAplication>();
 
             services.AddScoped<IPersonAplication, PersonAplication>();
             services.AddScoped<ICompanyAplication, CompanyAplication>();
@@ -47,6 +51,10 @@ namespace Customer.Infrastructure.Ioc
             services.AddScoped<IAddressAplication, AddressAplication>();
             services.AddScoped<IPhoneAplication, PhoneAplication>();
             services.AddScoped<ICompanyContactPersonAplication, CompanyContactPersonAplication>();
+            services.AddScoped<IUserEmailAplication, UserEmailAplication>();
+            services.AddScoped<IUserPhotoAplication, UserPhotoAplication>();
+            services.AddScoped<IUserAplication, UserAplication>();
+            services.AddScoped<IUserPersonAplication, UserPersonAplication>();
         }
 
         private static void LoadModulesInfrastructureData(IServiceCollection services, IConfiguration configuration)
