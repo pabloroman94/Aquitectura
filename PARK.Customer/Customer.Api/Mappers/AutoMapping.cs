@@ -20,12 +20,28 @@ namespace PARK.CustomerApi.Mappers
             CreateMap<ContactTypeModel, Domain.Entities.ContactType>().ReverseMap();
             CreateMap<GenderModel, Domain.Entities.Gender>().ReverseMap();
             CreateMap<CompanyContactPersonModel, Domain.Entities.CompanyContactPerson>().ReverseMap();
+            CreateMap<PersonModel, Domain.Entities.Person>().ReverseMap();
+            CreateMap<PersonProfessionModel, Domain.Entities.PersonProfession>().ReverseMap();
+            CreateMap<ProfessionModel, Domain.Entities.Profession>().ReverseMap();
+
             CreateMap<UserEmailModel, Domain.Entities.UserEmail>().ReverseMap();
             CreateMap<UserPhotoModel, Domain.Entities.UserPhoto>().ReverseMap();
             CreateMap<UserModel, Domain.Entities.User>().ReverseMap();
-            CreateMap<PersonModel, Domain.Entities.Person>().ReverseMap();
             CreateMap<UserPersonModel, Domain.Entities.UserPerson>().ReverseMap();
-
+            CreateMap<UserCompanyModel, Domain.Entities.UserCompany>().ReverseMap();
+            CreateMap<UserCategoryModel, Domain.Entities.UserCategory>().ReverseMap();
+            CreateMap<TagModel, Domain.Entities.Tag>().ReverseMap();
+            CreateMap<PersonTagModel, Domain.Entities.PersonTag>().ReverseMap();
+            CreateMap<CompanyTagModel, Domain.Entities.CompanyTag>().ReverseMap();
+            CreateMap<CompanyBusinessTypeModel, Domain.Entities.CompanyBusinessType>().ReverseMap();
+            CreateMap<BusinessTypeModel, Domain.Entities.BusinessType>().ReverseMap();
+            CreateMap<UserAddressModel, Domain.Entities.UserAddress>().ReverseMap();
+            CreateMap<StreetModel, Domain.Entities.Street>().ReverseMap();
+            CreateMap<ProvinceModel, Domain.Entities.Province>().ReverseMap();
+            CreateMap<CityModel, Domain.Entities.City>().ReverseMap();
+            CreateMap<CoordinatesModel, Domain.Entities.Coordinates>().ReverseMap();
+            CreateMap<NetworkModel, Domain.Entities.Network>().ReverseMap();
+            CreateMap<NetworkTypeModel, Domain.Entities.NetworkType>().ReverseMap();
 
             CreateMap<Address, Person>().ReverseMap()
                     .ForMember(d => d.StreetName, m => m.MapFrom(s => s.CustomerAddress.FirstOrDefault().StreetName))

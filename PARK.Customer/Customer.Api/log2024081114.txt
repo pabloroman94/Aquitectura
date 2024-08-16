@@ -1,0 +1,182 @@
+2024-08-11 14:02:01.601 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/CompanyBusinessType - application/json-patch+json 304
+2024-08-11 14:02:01.617 -03:00 () [INF] Generated CorrelationId: 078f230b-02fb-4d06-b328-0464c8507af2 
+2024-08-11 14:02:01.713 -03:00 (078f230b-02fb-4d06-b328-0464c8507af2) [INF] CORS policy execution successful.
+2024-08-11 14:02:01.720 -03:00 (078f230b-02fb-4d06-b328-0464c8507af2) [INF] Executing endpoint 'Customer.Api.Controllers.CompanyBusinessTypeController.Create (Customer.Api)'
+2024-08-11 14:02:01.753 -03:00 (078f230b-02fb-4d06-b328-0464c8507af2) [INF] Route matched with {action = "Create", controller = "CompanyBusinessType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.CompanyBusinessTypeModel) on controller Customer.Api.Controllers.CompanyBusinessTypeController (Customer.Api).
+2024-08-11 14:02:04.017 -03:00 (078f230b-02fb-4d06-b328-0464c8507af2) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.CompanyBusinessTypeModel
+2024-08-11 14:02:04.175 -03:00 (078f230b-02fb-4d06-b328-0464c8507af2) [INF] Executed action Customer.Api.Controllers.CompanyBusinessTypeController.Create (Customer.Api) in 2415.7902ms
+2024-08-11 14:02:04.180 -03:00 (078f230b-02fb-4d06-b328-0464c8507af2) [INF] Executed endpoint 'Customer.Api.Controllers.CompanyBusinessTypeController.Create (Customer.Api)'
+2024-08-11 14:02:04.219 -03:00 (078f230b-02fb-4d06-b328-0464c8507af2) [ERR] An eRror occurred.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CompanyBusinessTypeModel -> CompanyBusinessType
+Customer.Api.Models.CompanyBusinessTypeModel -> Domain.Entities.CompanyBusinessType
+   at lambda_method43(Closure, Object, CompanyBusinessType, ResolutionContext)
+   at PARK.CustomerApi.Controllers.CrudStampController`4.Create(TEntityDto entityDto)
+   at lambda_method7(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at PARK.CustomerApi.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api\Middlewares\ExceptionMiddleware.cs:line 27
+2024-08-11 14:02:04.346 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/CompanyBusinessType - 500 null application/json 2744.5194ms
+2024-08-11 14:02:39.927 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-11 14:02:40.652 -03:00 () [INF] Now listening on: https://localhost:5002
+2024-08-11 14:02:40.654 -03:00 () [INF] Now listening on: http://localhost:5003
+2024-08-11 14:02:40.656 -03:00 () [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:02:40.657 -03:00 () [INF] Hosting environment: Development
+2024-08-11 14:02:40.658 -03:00 () [INF] Content root path: C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api
+2024-08-11 14:02:41.612 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2024-08-11 14:02:41.891 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 282.9629ms
+2024-08-11 14:02:41.913 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:02:41.922 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 9.8522ms
+2024-08-11 14:02:42.071 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-11 14:02:42.150 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.7875ms
+2024-08-11 14:02:42.372 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2024-08-11 14:02:42.854 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 482.4141ms
+2024-08-11 14:04:09.649 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/CompanyBusinessType - application/json-patch+json 304
+2024-08-11 14:04:09.658 -03:00 () [INF] Generated CorrelationId: 5aa3f808-4fe9-4402-9465-281a93fcf34c 
+2024-08-11 14:04:09.723 -03:00 (5aa3f808-4fe9-4402-9465-281a93fcf34c) [INF] CORS policy execution successful.
+2024-08-11 14:04:09.732 -03:00 (5aa3f808-4fe9-4402-9465-281a93fcf34c) [INF] Executing endpoint 'Customer.Api.Controllers.CompanyBusinessTypeController.Create (Customer.Api)'
+2024-08-11 14:04:09.756 -03:00 (5aa3f808-4fe9-4402-9465-281a93fcf34c) [INF] Route matched with {action = "Create", controller = "CompanyBusinessType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.CompanyBusinessTypeModel) on controller Customer.Api.Controllers.CompanyBusinessTypeController (Customer.Api).
+2024-08-11 14:04:11.320 -03:00 (5aa3f808-4fe9-4402-9465-281a93fcf34c) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.CompanyBusinessTypeModel
+2024-08-11 14:04:11.906 -03:00 (5aa3f808-4fe9-4402-9465-281a93fcf34c) [INF] Executed DbCommand (99ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (DbType = Guid), @p3='?' (Size = 50), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?' (DbType = DateTime), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `CompanyBusinessType` (`ID`, `ACTIVE`, `BusinessTypeID`, `CODE`, `CompanyID`, `FINSERT`, `FUPDATE`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-08-11 14:04:11.976 -03:00 (5aa3f808-4fe9-4402-9465-281a93fcf34c) [INF] Executing OkObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[Customer.Api.Models.CompanyBusinessTypeModel, Customer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-11 14:04:12.028 -03:00 (5aa3f808-4fe9-4402-9465-281a93fcf34c) [INF] Executed action Customer.Api.Controllers.CompanyBusinessTypeController.Create (Customer.Api) in 2264.1715ms
+2024-08-11 14:04:12.032 -03:00 (5aa3f808-4fe9-4402-9465-281a93fcf34c) [INF] Executed endpoint 'Customer.Api.Controllers.CompanyBusinessTypeController.Create (Customer.Api)'
+2024-08-11 14:04:12.045 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/CompanyBusinessType - 200 361 application/json; charset=utf-8 2395.9888ms
+2024-08-11 14:18:41.001 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-11 14:18:41.883 -03:00 () [INF] Now listening on: https://localhost:5002
+2024-08-11 14:18:41.884 -03:00 () [INF] Now listening on: http://localhost:5003
+2024-08-11 14:18:41.887 -03:00 () [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:18:41.888 -03:00 () [INF] Hosting environment: Development
+2024-08-11 14:18:41.889 -03:00 () [INF] Content root path: C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api
+2024-08-11 14:18:42.572 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2024-08-11 14:18:42.926 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 366.7133ms
+2024-08-11 14:18:43.225 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-11 14:18:43.226 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:18:43.274 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 48.9798ms
+2024-08-11 14:18:43.331 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 105.634ms
+2024-08-11 14:18:43.690 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2024-08-11 14:18:44.307 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 617.7038ms
+2024-08-11 14:18:58.920 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/BusinessType - application/json-patch+json 269
+2024-08-11 14:18:58.954 -03:00 () [INF] Generated CorrelationId: a1c059b9-e542-4b8e-8e99-477ec2bbfa5f 
+2024-08-11 14:18:59.029 -03:00 (a1c059b9-e542-4b8e-8e99-477ec2bbfa5f) [INF] CORS policy execution successful.
+2024-08-11 14:18:59.038 -03:00 (a1c059b9-e542-4b8e-8e99-477ec2bbfa5f) [INF] Executing endpoint 'Customer.Api.Controllers.BusinessTypeController.Create (Customer.Api)'
+2024-08-11 14:18:59.068 -03:00 (a1c059b9-e542-4b8e-8e99-477ec2bbfa5f) [INF] Route matched with {action = "Create", controller = "BusinessType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.BusinessTypeModel) on controller Customer.Api.Controllers.BusinessTypeController (Customer.Api).
+2024-08-11 14:19:00.873 -03:00 (a1c059b9-e542-4b8e-8e99-477ec2bbfa5f) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.BusinessTypeModel
+2024-08-11 14:19:01.395 -03:00 (a1c059b9-e542-4b8e-8e99-477ec2bbfa5f) [INF] Executed DbCommand (71ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (DbType = Guid), @p3='?' (Size = 50), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 4000), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `BusinessType` (`ID`, `ACTIVE`, `CategoryID`, `CODE`, `FINSERT`, `FUPDATE`, `TypeName`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-08-11 14:19:01.460 -03:00 (a1c059b9-e542-4b8e-8e99-477ec2bbfa5f) [INF] Executing OkObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[Customer.Api.Models.BusinessTypeModel, Customer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-11 14:19:01.509 -03:00 (a1c059b9-e542-4b8e-8e99-477ec2bbfa5f) [INF] Executed action Customer.Api.Controllers.BusinessTypeController.Create (Customer.Api) in 2433.858ms
+2024-08-11 14:19:01.514 -03:00 (a1c059b9-e542-4b8e-8e99-477ec2bbfa5f) [INF] Executed endpoint 'Customer.Api.Controllers.BusinessTypeController.Create (Customer.Api)'
+2024-08-11 14:19:01.525 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/BusinessType - 200 326 application/json; charset=utf-8 2605.8978ms
+2024-08-11 14:47:56.943 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-11 14:47:57.831 -03:00 () [INF] Now listening on: https://localhost:5002
+2024-08-11 14:47:57.832 -03:00 () [INF] Now listening on: http://localhost:5003
+2024-08-11 14:47:57.834 -03:00 () [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:47:57.835 -03:00 () [INF] Hosting environment: Development
+2024-08-11 14:47:57.836 -03:00 () [INF] Content root path: C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api
+2024-08-11 14:47:58.830 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2024-08-11 14:47:59.164 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 342.0504ms
+2024-08-11 14:47:59.207 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:47:59.224 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 18.4517ms
+2024-08-11 14:47:59.484 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-11 14:48:00.286 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 802.626ms
+2024-08-11 14:48:00.362 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2024-08-11 14:48:01.202 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 839.8693ms
+2024-08-11 14:48:43.996 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-11 14:48:44.693 -03:00 () [INF] Now listening on: https://localhost:5002
+2024-08-11 14:48:44.695 -03:00 () [INF] Now listening on: http://localhost:5003
+2024-08-11 14:48:44.697 -03:00 () [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:48:44.698 -03:00 () [INF] Hosting environment: Development
+2024-08-11 14:48:44.699 -03:00 () [INF] Content root path: C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api
+2024-08-11 14:48:45.270 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2024-08-11 14:48:45.655 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 397.0377ms
+2024-08-11 14:48:45.697 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:48:45.705 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 7.9957ms
+2024-08-11 14:48:45.961 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-11 14:48:46.014 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.1953ms
+2024-08-11 14:48:46.387 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2024-08-11 14:48:47.006 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 619.2429ms
+2024-08-11 14:50:01.293 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/UserAddress - application/json-patch+json 516
+2024-08-11 14:50:01.304 -03:00 () [INF] Generated CorrelationId: 2478d087-cd52-4dbd-b0df-ba51d0ae7659 
+2024-08-11 14:50:01.388 -03:00 (2478d087-cd52-4dbd-b0df-ba51d0ae7659) [INF] CORS policy execution successful.
+2024-08-11 14:50:01.399 -03:00 (2478d087-cd52-4dbd-b0df-ba51d0ae7659) [INF] Executing endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-11 14:50:01.436 -03:00 (2478d087-cd52-4dbd-b0df-ba51d0ae7659) [INF] Route matched with {action = "Create", controller = "UserAddress"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.UserAddressModel) on controller Customer.Api.Controllers.UserAddressController (Customer.Api).
+2024-08-11 14:50:03.887 -03:00 (2478d087-cd52-4dbd-b0df-ba51d0ae7659) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.UserAddressModel
+2024-08-11 14:50:04.028 -03:00 (2478d087-cd52-4dbd-b0df-ba51d0ae7659) [INF] Executed action Customer.Api.Controllers.UserAddressController.Create (Customer.Api) in 2585.0991ms
+2024-08-11 14:50:04.035 -03:00 (2478d087-cd52-4dbd-b0df-ba51d0ae7659) [INF] Executed endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-11 14:50:04.069 -03:00 (2478d087-cd52-4dbd-b0df-ba51d0ae7659) [ERR] An eRror occurred.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+UserAddressModel -> UserAddress
+Customer.Api.Models.UserAddressModel -> Domain.Entities.UserAddress
+   at lambda_method50(Closure, Object, UserAddress, ResolutionContext)
+   at PARK.CustomerApi.Controllers.CrudStampController`4.Create(TEntityDto entityDto)
+   at lambda_method7(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at PARK.CustomerApi.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api\Middlewares\ExceptionMiddleware.cs:line 27
+2024-08-11 14:50:04.203 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/UserAddress - 500 null application/json 2910.1289ms
+2024-08-11 14:50:41.362 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-11 14:50:42.150 -03:00 () [INF] Now listening on: https://localhost:5002
+2024-08-11 14:50:42.153 -03:00 () [INF] Now listening on: http://localhost:5003
+2024-08-11 14:50:42.158 -03:00 () [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:50:42.162 -03:00 () [INF] Hosting environment: Development
+2024-08-11 14:50:42.164 -03:00 () [INF] Content root path: C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api
+2024-08-11 14:50:42.558 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2024-08-11 14:50:42.849 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 302.4899ms
+2024-08-11 14:50:43.049 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-11 14:50:43.053 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:50:43.145 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 96.6995ms
+2024-08-11 14:50:43.376 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 327.4502ms
+2024-08-11 14:50:43.577 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2024-08-11 14:50:43.988 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 411.6688ms
+2024-08-11 14:52:03.939 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/UserAddress - application/json-patch+json 516
+2024-08-11 14:52:03.952 -03:00 () [INF] Generated CorrelationId: b6d31e93-bac4-476e-8fa3-904193b8ed72 
+2024-08-11 14:52:04.024 -03:00 (b6d31e93-bac4-476e-8fa3-904193b8ed72) [INF] CORS policy execution successful.
+2024-08-11 14:52:04.034 -03:00 (b6d31e93-bac4-476e-8fa3-904193b8ed72) [INF] Executing endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-11 14:52:04.062 -03:00 (b6d31e93-bac4-476e-8fa3-904193b8ed72) [INF] Route matched with {action = "Create", controller = "UserAddress"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.UserAddressModel) on controller Customer.Api.Controllers.UserAddressController (Customer.Api).
+2024-08-11 14:52:05.805 -03:00 (b6d31e93-bac4-476e-8fa3-904193b8ed72) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.UserAddressModel
+2024-08-11 14:52:06.338 -03:00 (b6d31e93-bac4-476e-8fa3-904193b8ed72) [INF] Executed DbCommand (84ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (DbType = Guid), @p3='?' (Size = 50), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Guid), @p9='?' (DbType = Guid), @p10='?' (DbType = Guid), @p11='?' (Size = 50), @p12='?' (Size = 50), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `UserAddress` (`ID`, `ACTIVE`, `CityID`, `CODE`, `CoordinateID`, `CountryID`, `FINSERT`, `FUPDATE`, `ProvinceID`, `StreetID`, `UserID`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2024-08-11 14:52:06.402 -03:00 (b6d31e93-bac4-476e-8fa3-904193b8ed72) [INF] Executing OkObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[Customer.Api.Models.UserAddressModel, Customer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-11 14:52:06.455 -03:00 (b6d31e93-bac4-476e-8fa3-904193b8ed72) [INF] Executed action Customer.Api.Controllers.UserAddressController.Create (Customer.Api) in 2387.716ms
+2024-08-11 14:52:06.458 -03:00 (b6d31e93-bac4-476e-8fa3-904193b8ed72) [INF] Executed endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-11 14:52:06.484 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/UserAddress - 200 557 application/json; charset=utf-8 2544.7828ms

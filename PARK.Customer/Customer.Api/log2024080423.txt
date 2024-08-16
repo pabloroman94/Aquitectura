@@ -1,0 +1,57 @@
+2024-08-04 23:41:46.314 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-04 23:41:48.245 -03:00 () [INF] Now listening on: https://localhost:5002
+2024-08-04 23:41:48.248 -03:00 () [INF] Now listening on: http://localhost:5003
+2024-08-04 23:41:48.251 -03:00 () [INF] Application started. Press Ctrl+C to shut down.
+2024-08-04 23:41:48.252 -03:00 () [INF] Hosting environment: Development
+2024-08-04 23:41:48.254 -03:00 () [INF] Content root path: C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api
+2024-08-04 23:41:48.963 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2024-08-04 23:41:49.394 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 439.4881ms
+2024-08-04 23:41:49.585 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-04 23:41:49.586 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-04 23:41:49.595 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 10.4586ms
+2024-08-04 23:41:49.657 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.75ms
+2024-08-04 23:41:49.993 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2024-08-04 23:41:50.418 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 424.8471ms
+2024-08-04 23:42:16.404 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/Profession - application/json-patch+json 276
+2024-08-04 23:42:16.413 -03:00 () [INF] Generated CorrelationId: 1fe6d634-8930-4bb1-a1da-556f00ccf40d 
+2024-08-04 23:42:16.534 -03:00 (1fe6d634-8930-4bb1-a1da-556f00ccf40d) [INF] CORS policy execution successful.
+2024-08-04 23:42:16.542 -03:00 (1fe6d634-8930-4bb1-a1da-556f00ccf40d) [INF] Executing endpoint 'Customer.Api.Controllers.ProfessionController.Create (Customer.Api)'
+2024-08-04 23:42:16.574 -03:00 (1fe6d634-8930-4bb1-a1da-556f00ccf40d) [INF] Route matched with {action = "Create", controller = "Profession"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.ProfessionModel) on controller Customer.Api.Controllers.ProfessionController (Customer.Api).
+2024-08-04 23:42:18.664 -03:00 (1fe6d634-8930-4bb1-a1da-556f00ccf40d) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.ProfessionModel
+2024-08-04 23:42:19.189 -03:00 (1fe6d634-8930-4bb1-a1da-556f00ccf40d) [INF] Executed DbCommand (93ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (DbType = Guid), @p3='?' (Size = 50), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 255), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `PROFESSION` (`ID`, `ACTIVE`, `CATEGORYID`, `CODE`, `FINSERT`, `FUPDATE`, `PROFESSIONNAME`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-08-04 23:42:19.250 -03:00 (1fe6d634-8930-4bb1-a1da-556f00ccf40d) [INF] Executing OkObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[Customer.Api.Models.ProfessionModel, Customer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-04 23:42:19.300 -03:00 (1fe6d634-8930-4bb1-a1da-556f00ccf40d) [INF] Executed action Customer.Api.Controllers.ProfessionController.Create (Customer.Api) in 2682.6486ms
+2024-08-04 23:42:19.303 -03:00 (1fe6d634-8930-4bb1-a1da-556f00ccf40d) [INF] Executed endpoint 'Customer.Api.Controllers.ProfessionController.Create (Customer.Api)'
+2024-08-04 23:42:19.317 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/Profession - 200 333 application/json; charset=utf-8 2915.7546ms
+2024-08-04 23:51:59.211 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-04 23:52:00.049 -03:00 () [INF] Now listening on: https://localhost:5002
+2024-08-04 23:52:00.051 -03:00 () [INF] Now listening on: http://localhost:5003
+2024-08-04 23:52:00.054 -03:00 () [INF] Application started. Press Ctrl+C to shut down.
+2024-08-04 23:52:00.055 -03:00 () [INF] Hosting environment: Development
+2024-08-04 23:52:00.056 -03:00 () [INF] Content root path: C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api
+2024-08-04 23:52:01.045 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2024-08-04 23:52:01.297 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 256.4461ms
+2024-08-04 23:52:01.497 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-04 23:52:01.497 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-04 23:52:01.508 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 11.5503ms
+2024-08-04 23:52:01.561 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.854ms
+2024-08-04 23:52:02.012 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2024-08-04 23:52:02.376 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 365.0726ms
+2024-08-04 23:57:39.702 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-04 23:59:20.342 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-04 23:59:20.961 -03:00 () [INF] Now listening on: https://localhost:5002
+2024-08-04 23:59:20.964 -03:00 () [INF] Now listening on: http://localhost:5003
+2024-08-04 23:59:20.967 -03:00 () [INF] Application started. Press Ctrl+C to shut down.
+2024-08-04 23:59:20.968 -03:00 () [INF] Hosting environment: Development
+2024-08-04 23:59:20.969 -03:00 () [INF] Content root path: C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api
+2024-08-04 23:59:21.609 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2024-08-04 23:59:21.855 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 258.4782ms
+2024-08-04 23:59:21.875 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-04 23:59:21.883 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 8.6584ms
+2024-08-04 23:59:22.052 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-04 23:59:22.110 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.9452ms
+2024-08-04 23:59:22.527 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2024-08-04 23:59:22.936 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 409.9789ms

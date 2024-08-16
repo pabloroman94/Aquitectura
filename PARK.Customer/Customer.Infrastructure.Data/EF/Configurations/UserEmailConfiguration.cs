@@ -5,32 +5,35 @@ using System;
 
 namespace Infrastructure.Data.EF.Configurations
 {
-    public class UserEmailConfiguration : BaseCrudEntityConfiguration<UserEmail, Guid>
+    public class CoordinatesConfiguration : BaseCrudEntityConfiguration<Coordinates, Guid>
     {
-        public override void Configure(EntityTypeBuilder<UserEmail> builder)
+        public override void Configure(EntityTypeBuilder<Coordinates> builder)
         {
-            base.Configure("USER_EMAIL", builder);
+            base.Configure("Coordinates", builder);
 
             builder.Property(e => e.Id)
                    .HasColumnName("ID")
                    .IsRequired();
 
-            builder.Property(e => e.Email)
-                   .HasColumnName("EMAIL")
+            builder.Property(e => e.UserAddressID)
+                   .HasColumnName("UserAddressID")
                    .IsRequired();
 
-            builder.Property(e => e.Preferred)
-                   .HasColumnName("PREFERRED")
+            builder.Property(e => e.Lng)
+                   .HasColumnName("Lng")
                    .IsRequired();
 
-            builder.Property(e => e.UserID)
-                   .HasColumnName("USER_ID")
+            builder.Property(e => e.Lat)
+                   .HasColumnName("Lat")
+                   .IsRequired();
+              builder.Property(e => e.GoogleMapsURL)
+                   .HasColumnName("GoogleMapsURL")
                    .IsRequired();
 
-            //builder.HasOne(e => e.User)
-            //       .WithMany(u => u.UserEmails)
-            //       .HasForeignKey(e => e.UserID)
-            //       .OnDelete(DeleteBehavior.Cascade);
+            //builder.HasOne(c => c.UserAddress)
+            //   .WithOne(ua => ua.Coordinates)
+            //   .HasForeignKey<Coordinates>(c => c.UserAddressID)
+            //   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

@@ -12,6 +12,11 @@ namespace Domain.Entities
         public string LastName { get; set; }
         public DateTime Birthdate { get; set; }
         public string Gender { get; set; }
-        public Guid ProfessionalTypeID { get; set; }
+        public int? ProfessionalTypeID { get; set; }  // Optional, consider removing if not in use
+
+        // Navigation properties
+        //public User User { get; set; }
+        //public IEnumerable<PersonProfession> PersonProfessions { get; set; }
+        //public IEnumerable<PersonTag> PersonTags { get; set; }
     }
 }

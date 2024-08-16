@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Interfaces.Aplication;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -26,6 +27,22 @@ namespace Infrastructure.Data.EF
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<UserPerson> UserPeople { get; set; }
+        public virtual DbSet<PersonProfession> PersonProfessions { get; set; }
+        public virtual DbSet<Profession> Professions { get; set; }
+        public virtual DbSet<UserCategory> UserCategories { get; set; }
+        public virtual DbSet<UserCompany> UserCompanies { get; set; }
+        public virtual DbSet<Tag> Tags { get; set; }
+        public virtual DbSet<PersonTag> PersonTags { get; set; }
+        public virtual DbSet<CompanyTag> CompanyTags { get; set; }
+        public virtual DbSet<CompanyBusinessType> CompanyBusinessTypes { get; set; }
+        public virtual DbSet<BusinessType> BusinessTypes { get; set; }
+        public virtual DbSet<UserAddress> UserAddresses { get; set; }
+        public virtual DbSet<Street> Streets { get; set; }
+        public virtual DbSet<Province> Provinces { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<Coordinates> Coordinates { get; set; }
+        public virtual DbSet<Network> Networks { get; set; }
+        public virtual DbSet<NetworkType> NetworkTypes { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

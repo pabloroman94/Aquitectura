@@ -15,7 +15,7 @@ namespace Infrastructure.Data.EF.Configurations
                    .HasColumnName("ID")
                    .IsRequired();
 
-            builder.Property(e => e.LoginName)
+            builder.Property(e => e.Username)
                    .HasColumnName("LOGINNAME")
                    .IsRequired();
 
