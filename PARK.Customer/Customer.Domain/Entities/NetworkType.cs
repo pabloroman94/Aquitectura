@@ -12,6 +12,6 @@ namespace Domain.Entities
         public string IconURL { get; set; }  // Descripción del tipo de red social (e.g., "Social Media", "Website")
 
         // Navigation property
-        //public IEnumerable<Network> Networks { get; set; }  // Una relación uno a muchos con Network
+        public ICollection<Network> Networks { get; set; }
     }
 }

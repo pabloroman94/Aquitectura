@@ -1,0 +1,408 @@
+2024-08-18 22:20:53.452 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-18 22:20:55.372 -03:00 () [INF] Now listening on: https://localhost:5002
+2024-08-18 22:20:55.373 -03:00 () [INF] Now listening on: http://localhost:5003
+2024-08-18 22:20:55.377 -03:00 () [INF] Application started. Press Ctrl+C to shut down.
+2024-08-18 22:20:55.379 -03:00 () [INF] Hosting environment: Development
+2024-08-18 22:20:55.380 -03:00 () [INF] Content root path: C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api
+2024-08-18 22:20:56.847 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2024-08-18 22:20:57.485 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 647.2958ms
+2024-08-18 22:20:57.488 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-18 22:20:57.513 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 25.4052ms
+2024-08-18 22:20:57.752 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-18 22:20:57.845 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.1675ms
+2024-08-18 22:20:58.240 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2024-08-18 22:20:58.933 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 693.8069ms
+2024-08-18 22:21:00.686 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-18 22:21:00.686 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-18 22:21:00.694 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 7.5349ms
+2024-08-18 22:21:00.721 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.0818ms
+2024-08-18 22:21:43.259 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/Province - application/json-patch+json 220
+2024-08-18 22:21:43.269 -03:00 () [INF] Generated CorrelationId: 69d8886a-053b-4774-8ce0-ca4832793f0a 
+2024-08-18 22:21:43.405 -03:00 (69d8886a-053b-4774-8ce0-ca4832793f0a) [INF] CORS policy execution successful.
+2024-08-18 22:21:43.411 -03:00 (69d8886a-053b-4774-8ce0-ca4832793f0a) [INF] Executing endpoint 'Customer.Api.Controllers.ProvinceController.Create (Customer.Api)'
+2024-08-18 22:21:43.438 -03:00 (69d8886a-053b-4774-8ce0-ca4832793f0a) [INF] Route matched with {action = "Create", controller = "Province"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.ProvinceModel) on controller Customer.Api.Controllers.ProvinceController (Customer.Api).
+2024-08-18 22:21:45.748 -03:00 (69d8886a-053b-4774-8ce0-ca4832793f0a) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.ProvinceModel
+2024-08-18 22:21:46.199 -03:00 (69d8886a-053b-4774-8ce0-ca4832793f0a) [INF] Executed DbCommand (58ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (Size = 50), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 255), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `Province` (`ID`, `ACTIVE`, `CODE`, `CountryID`, `FINSERT`, `FUPDATE`, `ProvinceName`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-08-18 22:21:46.255 -03:00 (69d8886a-053b-4774-8ce0-ca4832793f0a) [INF] Executing OkObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[Customer.Api.Models.ProvinceModel, Customer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-18 22:21:46.312 -03:00 (69d8886a-053b-4774-8ce0-ca4832793f0a) [INF] Executed action Customer.Api.Controllers.ProvinceController.Create (Customer.Api) in 2867.8044ms
+2024-08-18 22:21:46.316 -03:00 (69d8886a-053b-4774-8ce0-ca4832793f0a) [INF] Executed endpoint 'Customer.Api.Controllers.ProvinceController.Create (Customer.Api)'
+2024-08-18 22:21:46.325 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/Province - 200 358 application/json; charset=utf-8 3066.1394ms
+2024-08-18 22:21:49.765 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/Province - application/json-patch+json 220
+2024-08-18 22:21:49.769 -03:00 () [INF] Generated CorrelationId: a73038c9-5bb9-4e34-bf6b-813b8939d5b6 
+2024-08-18 22:21:49.775 -03:00 (a73038c9-5bb9-4e34-bf6b-813b8939d5b6) [INF] CORS policy execution successful.
+2024-08-18 22:21:49.779 -03:00 (a73038c9-5bb9-4e34-bf6b-813b8939d5b6) [INF] Executing endpoint 'Customer.Api.Controllers.ProvinceController.Create (Customer.Api)'
+2024-08-18 22:21:49.781 -03:00 (a73038c9-5bb9-4e34-bf6b-813b8939d5b6) [INF] Route matched with {action = "Create", controller = "Province"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.ProvinceModel) on controller Customer.Api.Controllers.ProvinceController (Customer.Api).
+2024-08-18 22:21:49.852 -03:00 (a73038c9-5bb9-4e34-bf6b-813b8939d5b6) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.ProvinceModel
+2024-08-18 22:21:49.877 -03:00 (a73038c9-5bb9-4e34-bf6b-813b8939d5b6) [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (Size = 50), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 255), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `Province` (`ID`, `ACTIVE`, `CODE`, `CountryID`, `FINSERT`, `FUPDATE`, `ProvinceName`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-08-18 22:21:49.882 -03:00 (a73038c9-5bb9-4e34-bf6b-813b8939d5b6) [INF] Executing OkObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[Customer.Api.Models.ProvinceModel, Customer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-18 22:21:49.885 -03:00 (a73038c9-5bb9-4e34-bf6b-813b8939d5b6) [INF] Executed action Customer.Api.Controllers.ProvinceController.Create (Customer.Api) in 101.5833ms
+2024-08-18 22:21:49.889 -03:00 (a73038c9-5bb9-4e34-bf6b-813b8939d5b6) [INF] Executed endpoint 'Customer.Api.Controllers.ProvinceController.Create (Customer.Api)'
+2024-08-18 22:21:49.897 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/Province - 200 358 application/json; charset=utf-8 132.7355ms
+2024-08-18 22:22:51.327 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/City - application/json-patch+json 241
+2024-08-18 22:22:51.344 -03:00 () [INF] Generated CorrelationId: 66d62ee5-550a-4666-92ff-423d56d200e8 
+2024-08-18 22:22:51.349 -03:00 (66d62ee5-550a-4666-92ff-423d56d200e8) [INF] CORS policy execution successful.
+2024-08-18 22:22:51.356 -03:00 (66d62ee5-550a-4666-92ff-423d56d200e8) [INF] Executing endpoint 'Customer.Api.Controllers.CityController.Create (Customer.Api)'
+2024-08-18 22:22:51.368 -03:00 (66d62ee5-550a-4666-92ff-423d56d200e8) [INF] Route matched with {action = "Create", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.CityModel) on controller Customer.Api.Controllers.CityController (Customer.Api).
+2024-08-18 22:22:51.403 -03:00 (66d62ee5-550a-4666-92ff-423d56d200e8) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.CityModel
+2024-08-18 22:22:51.496 -03:00 (66d62ee5-550a-4666-92ff-423d56d200e8) [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (Size = 255), @p3='?' (Size = 50), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 10), @p7='?' (DbType = Guid), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `City` (`ID`, `ACTIVE`, `CityName`, `CODE`, `FINSERT`, `FUPDATE`, `PostalCode`, `ProvinceID`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2024-08-18 22:22:51.521 -03:00 (66d62ee5-550a-4666-92ff-423d56d200e8) [INF] Executing OkObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[Customer.Api.Models.CityModel, Customer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-18 22:22:51.529 -03:00 (66d62ee5-550a-4666-92ff-423d56d200e8) [INF] Executed action Customer.Api.Controllers.CityController.Create (Customer.Api) in 150.394ms
+2024-08-18 22:22:51.538 -03:00 (66d62ee5-550a-4666-92ff-423d56d200e8) [INF] Executed endpoint 'Customer.Api.Controllers.CityController.Create (Customer.Api)'
+2024-08-18 22:22:51.542 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/City - 200 377 application/json; charset=utf-8 214.9152ms
+2024-08-18 22:24:35.660 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/Street - application/json-patch+json 262
+2024-08-18 22:24:35.686 -03:00 () [INF] Generated CorrelationId: 69f9bc96-50dd-46f1-a327-01dae2383b05 
+2024-08-18 22:24:35.701 -03:00 (69f9bc96-50dd-46f1-a327-01dae2383b05) [INF] CORS policy execution successful.
+2024-08-18 22:24:35.716 -03:00 (69f9bc96-50dd-46f1-a327-01dae2383b05) [INF] Executing endpoint 'Customer.Api.Controllers.StreetController.Create (Customer.Api)'
+2024-08-18 22:24:35.727 -03:00 (69f9bc96-50dd-46f1-a327-01dae2383b05) [INF] Route matched with {action = "Create", controller = "Street"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.StreetModel) on controller Customer.Api.Controllers.StreetController (Customer.Api).
+2024-08-18 22:24:35.759 -03:00 (69f9bc96-50dd-46f1-a327-01dae2383b05) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.StreetModel
+2024-08-18 22:24:35.851 -03:00 (69f9bc96-50dd-46f1-a327-01dae2383b05) [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (DbType = Guid), @p3='?' (Size = 50), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 10), @p7='?' (Size = 255), @p8='?' (Size = 10), @p9='?' (Size = 50), @p10='?' (Size = 50), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `Street` (`ID`, `ACTIVE`, `CityID`, `CODE`, `FINSERT`, `FUPDATE`, `Floor`, `StreetName`, `StreetNumber`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2024-08-18 22:24:35.877 -03:00 (69f9bc96-50dd-46f1-a327-01dae2383b05) [INF] Executing OkObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[Customer.Api.Models.StreetModel, Customer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-18 22:24:35.887 -03:00 (69f9bc96-50dd-46f1-a327-01dae2383b05) [INF] Executed action Customer.Api.Controllers.StreetController.Create (Customer.Api) in 153.5529ms
+2024-08-18 22:24:35.889 -03:00 (69f9bc96-50dd-46f1-a327-01dae2383b05) [INF] Executed endpoint 'Customer.Api.Controllers.StreetController.Create (Customer.Api)'
+2024-08-18 22:24:35.892 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/Street - 200 395 application/json; charset=utf-8 232.239ms
+2024-08-18 22:29:20.399 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/Coordinates - application/json-patch+json 248
+2024-08-18 22:29:20.448 -03:00 () [INF] Generated CorrelationId: f7f36ea9-c34b-4aa4-ba4b-91568892a02d 
+2024-08-18 22:29:20.450 -03:00 (f7f36ea9-c34b-4aa4-ba4b-91568892a02d) [INF] CORS policy execution successful.
+2024-08-18 22:29:20.453 -03:00 (f7f36ea9-c34b-4aa4-ba4b-91568892a02d) [INF] Executing endpoint 'Customer.Api.Controllers.CoordinatesController.Create (Customer.Api)'
+2024-08-18 22:29:20.468 -03:00 (f7f36ea9-c34b-4aa4-ba4b-91568892a02d) [INF] Route matched with {action = "Create", controller = "Coordinates"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.CoordinatesModel) on controller Customer.Api.Controllers.CoordinatesController (Customer.Api).
+2024-08-18 22:29:20.491 -03:00 (f7f36ea9-c34b-4aa4-ba4b-91568892a02d) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.CoordinatesModel
+2024-08-18 22:29:20.614 -03:00 (f7f36ea9-c34b-4aa4-ba4b-91568892a02d) [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (Size = 50), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (Size = 255), @p6='?' (DbType = Decimal), @p7='?' (DbType = Decimal), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `Coordinates` (`ID`, `ACTIVE`, `CODE`, `FINSERT`, `FUPDATE`, `GoogleMapsURL`, `Lat`, `Lng`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2024-08-18 22:29:20.634 -03:00 (f7f36ea9-c34b-4aa4-ba4b-91568892a02d) [INF] Executing OkObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[Customer.Api.Models.CoordinatesModel, Customer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-18 22:29:20.649 -03:00 (f7f36ea9-c34b-4aa4-ba4b-91568892a02d) [INF] Executed action Customer.Api.Controllers.CoordinatesController.Create (Customer.Api) in 171.5653ms
+2024-08-18 22:29:20.651 -03:00 (f7f36ea9-c34b-4aa4-ba4b-91568892a02d) [INF] Executed endpoint 'Customer.Api.Controllers.CoordinatesController.Create (Customer.Api)'
+2024-08-18 22:29:20.659 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/Coordinates - 200 375 application/json; charset=utf-8 260.0993ms
+2024-08-18 22:31:35.377 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/UserAddress - application/json-patch+json 300
+2024-08-18 22:31:35.384 -03:00 () [INF] Generated CorrelationId: 7dcc5fee-5dc5-4dc4-8337-8291e07e2356 
+2024-08-18 22:31:35.387 -03:00 (7dcc5fee-5dc5-4dc4-8337-8291e07e2356) [INF] CORS policy execution successful.
+2024-08-18 22:31:35.389 -03:00 (7dcc5fee-5dc5-4dc4-8337-8291e07e2356) [INF] Executing endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-18 22:31:35.397 -03:00 (7dcc5fee-5dc5-4dc4-8337-8291e07e2356) [INF] Route matched with {action = "Create", controller = "UserAddress"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.UserAddressModel) on controller Customer.Api.Controllers.UserAddressController (Customer.Api).
+2024-08-18 22:31:35.413 -03:00 (7dcc5fee-5dc5-4dc4-8337-8291e07e2356) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.UserAddressModel
+2024-08-18 22:31:35.509 -03:00 (7dcc5fee-5dc5-4dc4-8337-8291e07e2356) [ERR] Failed executing DbCommand (19ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (Size = 50), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?' (DbType = Guid), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `UserAddress` (`ID`, `ACTIVE`, `CODE`, `CoordinatesID`, `FINSERT`, `FUPDATE`, `StreetID`, `UserID`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2024-08-18 22:31:35.786 -03:00 (7dcc5fee-5dc5-4dc4-8337-8291e07e2356) [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Data.EF.Park_CustomerContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Field 'CITYID' doesn't have a default value
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Field 'CITYID' doesn't have a default value
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-08-18 22:31:36.315 -03:00 (7dcc5fee-5dc5-4dc4-8337-8291e07e2356) [INF] Executed action Customer.Api.Controllers.UserAddressController.Create (Customer.Api) in 914.3923ms
+2024-08-18 22:31:36.318 -03:00 (7dcc5fee-5dc5-4dc4-8337-8291e07e2356) [INF] Executed endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-18 22:31:36.573 -03:00 (7dcc5fee-5dc5-4dc4-8337-8291e07e2356) [ERR] An eRror occurred.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Field 'CITYID' doesn't have a default value
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Infrastructure.Data.EF.BaseRepository`3.Create(T entity) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Infrastructure.Data\EF\BaseRepository.cs:line 53
+   at Application.Aplications.BaseAplication`3.Create(T entity) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Application\Aplications\SeedWork\BaseAplication.cs:line 29
+   at Application.Aplications.SeedWork.BaseStampAplication`3.Create(T entity) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Application\Aplications\SeedWork\BaseStampAplication.cs:line 30
+   at PARK.CustomerApi.Controllers.CrudStampController`4.Create(TEntityDto entityDto) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api\Controllers\SeedWork\CrudStampController.cs:line 78
+   at lambda_method703(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at PARK.CustomerApi.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api\Middlewares\ExceptionMiddleware.cs:line 27
+2024-08-18 22:31:36.763 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/UserAddress - 500 null application/json 1386.7021ms
+2024-08-18 22:33:19.804 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/UserAddress - application/json-patch+json 301
+2024-08-18 22:33:19.820 -03:00 () [INF] Generated CorrelationId: 54d7d12f-dfb0-4471-9df5-ff43ad5e6793 
+2024-08-18 22:33:19.824 -03:00 (54d7d12f-dfb0-4471-9df5-ff43ad5e6793) [INF] CORS policy execution successful.
+2024-08-18 22:33:19.825 -03:00 (54d7d12f-dfb0-4471-9df5-ff43ad5e6793) [INF] Executing endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-18 22:33:19.828 -03:00 (54d7d12f-dfb0-4471-9df5-ff43ad5e6793) [INF] Route matched with {action = "Create", controller = "UserAddress"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.UserAddressModel) on controller Customer.Api.Controllers.UserAddressController (Customer.Api).
+2024-08-18 22:33:19.854 -03:00 (54d7d12f-dfb0-4471-9df5-ff43ad5e6793) [INF] Executing BadRequestObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-18 22:33:19.858 -03:00 (54d7d12f-dfb0-4471-9df5-ff43ad5e6793) [INF] Executed action Customer.Api.Controllers.UserAddressController.Create (Customer.Api) in 24.8607ms
+2024-08-18 22:33:19.869 -03:00 (54d7d12f-dfb0-4471-9df5-ff43ad5e6793) [INF] Executed endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-18 22:33:19.875 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/UserAddress - 400 168 application/json; charset=utf-8 73.4893ms
+2024-08-18 22:33:41.651 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/UserAddress - application/json-patch+json 300
+2024-08-18 22:33:41.656 -03:00 () [INF] Generated CorrelationId: 48ae3864-337f-46bb-9f34-3c2621075b3e 
+2024-08-18 22:33:41.658 -03:00 (48ae3864-337f-46bb-9f34-3c2621075b3e) [INF] CORS policy execution successful.
+2024-08-18 22:33:41.660 -03:00 (48ae3864-337f-46bb-9f34-3c2621075b3e) [INF] Executing endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-18 22:33:41.702 -03:00 (48ae3864-337f-46bb-9f34-3c2621075b3e) [INF] Route matched with {action = "Create", controller = "UserAddress"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.UserAddressModel) on controller Customer.Api.Controllers.UserAddressController (Customer.Api).
+2024-08-18 22:33:41.720 -03:00 (48ae3864-337f-46bb-9f34-3c2621075b3e) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.UserAddressModel
+2024-08-18 22:33:41.743 -03:00 (48ae3864-337f-46bb-9f34-3c2621075b3e) [ERR] Failed executing DbCommand (13ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (Size = 50), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?' (DbType = Guid), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `UserAddress` (`ID`, `ACTIVE`, `CODE`, `CoordinatesID`, `FINSERT`, `FUPDATE`, `StreetID`, `UserID`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2024-08-18 22:33:41.756 -03:00 (48ae3864-337f-46bb-9f34-3c2621075b3e) [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Data.EF.Park_CustomerContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Field 'CITYID' doesn't have a default value
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Field 'CITYID' doesn't have a default value
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-08-18 22:33:42.219 -03:00 (48ae3864-337f-46bb-9f34-3c2621075b3e) [INF] Executed action Customer.Api.Controllers.UserAddressController.Create (Customer.Api) in 506.2001ms
+2024-08-18 22:33:42.222 -03:00 (48ae3864-337f-46bb-9f34-3c2621075b3e) [INF] Executed endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-18 22:33:42.382 -03:00 (48ae3864-337f-46bb-9f34-3c2621075b3e) [ERR] An eRror occurred.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Field 'CITYID' doesn't have a default value
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Infrastructure.Data.EF.BaseRepository`3.Create(T entity) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Infrastructure.Data\EF\BaseRepository.cs:line 53
+   at Application.Aplications.BaseAplication`3.Create(T entity) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Application\Aplications\SeedWork\BaseAplication.cs:line 29
+   at Application.Aplications.SeedWork.BaseStampAplication`3.Create(T entity) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Application\Aplications\SeedWork\BaseStampAplication.cs:line 30
+   at PARK.CustomerApi.Controllers.CrudStampController`4.Create(TEntityDto entityDto) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api\Controllers\SeedWork\CrudStampController.cs:line 78
+   at lambda_method703(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at PARK.CustomerApi.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api\Middlewares\ExceptionMiddleware.cs:line 27
+2024-08-18 22:33:42.553 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/UserAddress - 500 null application/json 901.8384ms
+2024-08-18 22:35:43.507 -03:00 () [INF] User profile is available. Using 'C:\Users\Pablo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-18 22:35:44.338 -03:00 () [INF] Now listening on: https://localhost:5002
+2024-08-18 22:35:44.372 -03:00 () [INF] Now listening on: http://localhost:5003
+2024-08-18 22:35:44.375 -03:00 () [INF] Application started. Press Ctrl+C to shut down.
+2024-08-18 22:35:44.378 -03:00 () [INF] Hosting environment: Development
+2024-08-18 22:35:44.379 -03:00 () [INF] Content root path: C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api
+2024-08-18 22:35:45.381 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2024-08-18 22:35:45.755 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 382.251ms
+2024-08-18 22:35:45.769 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-18 22:35:45.778 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 9.9191ms
+2024-08-18 22:35:45.962 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/_vs/browserLink - null null
+2024-08-18 22:35:46.048 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.2411ms
+2024-08-18 22:35:46.362 -03:00 () [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2024-08-18 22:35:47.086 -03:00 () [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 724.7778ms
+2024-08-18 22:37:24.832 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/UserAddress - application/json-patch+json 276
+2024-08-18 22:37:24.843 -03:00 () [INF] Generated CorrelationId: dbeaac8a-1634-46e1-af53-191a0b774f37 
+2024-08-18 22:37:24.919 -03:00 (dbeaac8a-1634-46e1-af53-191a0b774f37) [INF] CORS policy execution successful.
+2024-08-18 22:37:24.927 -03:00 (dbeaac8a-1634-46e1-af53-191a0b774f37) [INF] Executing endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-18 22:37:24.954 -03:00 (dbeaac8a-1634-46e1-af53-191a0b774f37) [INF] Route matched with {action = "Create", controller = "UserAddress"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.UserAddressModel) on controller Customer.Api.Controllers.UserAddressController (Customer.Api).
+2024-08-18 22:37:27.056 -03:00 (dbeaac8a-1634-46e1-af53-191a0b774f37) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.UserAddressModel
+2024-08-18 22:37:27.635 -03:00 (dbeaac8a-1634-46e1-af53-191a0b774f37) [ERR] Failed executing DbCommand (67ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (Size = 50), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?' (DbType = Guid), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `UserAddress` (`ID`, `ACTIVE`, `CODE`, `CoordinatesID`, `FINSERT`, `FUPDATE`, `StreetID`, `UserID`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2024-08-18 22:37:27.705 -03:00 (dbeaac8a-1634-46e1-af53-191a0b774f37) [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Data.EF.Park_CustomerContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Field 'CITYID' doesn't have a default value
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Field 'CITYID' doesn't have a default value
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-08-18 22:37:28.045 -03:00 (dbeaac8a-1634-46e1-af53-191a0b774f37) [INF] Executed action Customer.Api.Controllers.UserAddressController.Create (Customer.Api) in 3082.6753ms
+2024-08-18 22:37:28.048 -03:00 (dbeaac8a-1634-46e1-af53-191a0b774f37) [INF] Executed endpoint 'Customer.Api.Controllers.UserAddressController.Create (Customer.Api)'
+2024-08-18 22:37:28.198 -03:00 (dbeaac8a-1634-46e1-af53-191a0b774f37) [ERR] An eRror occurred.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Field 'CITYID' doesn't have a default value
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Infrastructure.Data.EF.BaseRepository`3.Create(T entity) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Infrastructure.Data\EF\BaseRepository.cs:line 53
+   at Application.Aplications.BaseAplication`3.Create(T entity) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Application\Aplications\SeedWork\BaseAplication.cs:line 29
+   at Application.Aplications.SeedWork.BaseStampAplication`3.Create(T entity) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Application\Aplications\SeedWork\BaseStampAplication.cs:line 30
+   at PARK.CustomerApi.Controllers.CrudStampController`4.Create(TEntityDto entityDto) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api\Controllers\SeedWork\CrudStampController.cs:line 78
+   at lambda_method7(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at PARK.CustomerApi.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Pablo\Desktop\myguia\Aquitectura\PARK.Customer\Customer.Api\Middlewares\ExceptionMiddleware.cs:line 27
+2024-08-18 22:37:28.283 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/UserAddress - 500 null application/json 3451.884ms

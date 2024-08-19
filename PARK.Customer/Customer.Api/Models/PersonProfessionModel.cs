@@ -10,7 +10,7 @@ namespace Customer.Api.Models
         public Guid ProfessionID { get; set; }
 
         // Navigation properties
-        //public Person Person { get; set; }
-        //public Profession Profession { get; set; }
+        public UserPerson Person { get; set; }
+        public Profession Profession { get; set; }
     }
 }

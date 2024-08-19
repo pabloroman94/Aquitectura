@@ -23,12 +23,18 @@ namespace Infrastructure.Data.EF.Configurations
                    .HasColumnName("PROFILEDESCRIPTION")
                    .IsRequired();
 
-         
 
-            //builder.HasOne(e => e.User)
-            //       .WithMany(u => u.UserEmails)
-            //       .HasForeignKey(e => e.UserID)
-            //       .OnDelete(DeleteBehavior.Cascade);
+            // Relaciones
+            builder.HasMany(e => e.Networks)  // Asumiendo que tienes una colección de Networks en User
+                  .WithOne(n => n.User)
+                  .HasForeignKey(n => n.UserID)
+                  .OnDelete(DeleteBehavior.Cascade);  // Si se elimina un User, se eliminan sus Networks
+
+            // Relación con UserAddresses
+            builder.HasMany(e => e.UserAddresses)  // Asumiendo que tienes una colección de UserAddresses en User
+                   .WithOne(ua => ua.User)
+                   .HasForeignKey(ua => ua.UserID)
+                   .OnDelete(DeleteBehavior.Cascade);  // Si se elimina un User, se eliminan sus direcciones
         }
     }
 }

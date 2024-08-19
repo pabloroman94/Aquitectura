@@ -8,10 +8,10 @@ namespace Customer.Api.Models
     public class BusinessTypeModel : BaseCrudEntityModel<Guid>
     {
         public string TypeName { get; set; }
-        public Guid CategoryID { get; set; }
+        public Guid SubCategoryID { get; set; }
 
         // Navigation properties
-        //public CategoryModel Category { get; set; }
-        //public ICollection<CompanyBusinessTypeModel> CompanyBusinessTypes { get; set; }
+        public SubCategoryModel SubCategory { get; set; }
+        public ICollection<ClassificationModel> Classifications { get; set; }
     }
 }

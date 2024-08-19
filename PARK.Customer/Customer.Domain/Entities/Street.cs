@@ -13,10 +13,8 @@ namespace Domain.Entities
         public string Floor { get; set; }
         public Guid CityID { get; set; }
 
-        // Navigation Property
-        //public City City { get; set; }
-
-        // A street can have multiple user addresses
-        //public IEnumerable<UserAddress> UserAddresses { get; set; }
+        // Navigation properties
+        public City City { get; set; }
+        public ICollection<UserAddress> UserAddresses { get; set; }
     }
 }

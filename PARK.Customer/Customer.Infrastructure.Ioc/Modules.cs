@@ -57,6 +57,9 @@ namespace Customer.Infrastructure.Ioc
             services.AddScoped<IBaseStampAplication<Domain.Entities.Coordinates, Guid, CoordinatesFilter>, CoordinatesAplication>();
             services.AddScoped<IBaseStampAplication<Domain.Entities.Network, Guid, NetworkFilter>, NetworkAplication>();
             services.AddScoped<IBaseStampAplication<Domain.Entities.NetworkType, Guid, NetworkTypeFilter>, NetworkTypeAplication>();
+            services.AddScoped<IBaseStampAplication<Domain.Entities.SubCategory, Guid, SubCategoryFilter>, SubCategoryAplication>();
+            services.AddScoped<IBaseStampAplication<Domain.Entities.Classification, Guid, ClassificationFilter>, ClassificationAplication>();
+            services.AddScoped<IBaseStampAplication<Domain.Entities.Country, Guid, CountryFilter>, CountryAplication>();
 
 
 
@@ -88,6 +91,10 @@ namespace Customer.Infrastructure.Ioc
             services.AddScoped<ICoordinatesAplication, CoordinatesAplication>();
             services.AddScoped<INetworkAplication, NetworkAplication>();
             services.AddScoped<INetworkTypeAplication, NetworkTypeAplication>();
+            services.AddScoped<ITagAplication, TagAplication>();
+            services.AddScoped<ISubCategoryAplication, SubCategoryAplication>();
+            services.AddScoped<IClassificationAplication, ClassificationAplication> ();
+            services.AddScoped<ICountryAplication, CountryAplication> ();
         }
 
         private static void LoadModulesInfrastructureData(IServiceCollection services, IConfiguration configuration)

@@ -14,7 +14,7 @@ namespace Domain.Entities
         public Guid NetworkTypeID { get; set; }  // Clave foránea que referencia a NetworkType(ID)
 
         // Navigation properties
-        //public User User { get; set; }
-        //public NetworkType NetworkType { get; set; }
+        public User User { get; set; }
+        public NetworkType NetworkType { get; set; }
     }
 }

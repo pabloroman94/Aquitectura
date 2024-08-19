@@ -1,0 +1,14 @@
+2024-08-18 21:04:08.064 -03:00 () [INF] Request starting HTTP/2 POST https://localhost:5002/api/v1/Network - application/json-patch+json 286
+2024-08-18 21:04:08.089 -03:00 () [INF] Generated CorrelationId: a0e83704-a185-4ff3-97fb-ed28ea944b69 
+2024-08-18 21:04:08.091 -03:00 (a0e83704-a185-4ff3-97fb-ed28ea944b69) [INF] CORS policy execution successful.
+2024-08-18 21:04:08.095 -03:00 (a0e83704-a185-4ff3-97fb-ed28ea944b69) [INF] Executing endpoint 'Customer.Api.Controllers.NetworkController.Create (Customer.Api)'
+2024-08-18 21:04:08.103 -03:00 (a0e83704-a185-4ff3-97fb-ed28ea944b69) [INF] Route matched with {action = "Create", controller = "Network"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Customer.Api.Models.NetworkModel) on controller Customer.Api.Controllers.NetworkController (Customer.Api).
+2024-08-18 21:04:08.120 -03:00 (a0e83704-a185-4ff3-97fb-ed28ea944b69) [INF] Getting Create : ip 0.0.0.1 -> custom property : Customer.Api.Models.NetworkModel
+2024-08-18 21:04:08.159 -03:00 (a0e83704-a185-4ff3-97fb-ed28ea944b69) [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 1), @p2='?' (Size = 50), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?' (Size = 4000), @p8='?' (DbType = Guid), @p9='?' (Size = 50), @p10='?' (Size = 50), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `Network` (`ID`, `ACTIVE`, `CODE`, `Description`, `FINSERT`, `FUPDATE`, `NetworkTypeID`, `URL`, `UserID`, `USERNAME`, `USERNAMEUPDATE`, `VERSION`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2024-08-18 21:04:08.170 -03:00 (a0e83704-a185-4ff3-97fb-ed28ea944b69) [INF] Executing OkObjectResult, writing value of type 'PARK.CustomerApi.Models.ApiResponseModel`1[[Customer.Api.Models.NetworkModel, Customer.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-18 21:04:08.178 -03:00 (a0e83704-a185-4ff3-97fb-ed28ea944b69) [INF] Executed action Customer.Api.Controllers.NetworkController.Create (Customer.Api) in 61.1353ms
+2024-08-18 21:04:08.180 -03:00 (a0e83704-a185-4ff3-97fb-ed28ea944b69) [INF] Executed endpoint 'Customer.Api.Controllers.NetworkController.Create (Customer.Api)'
+2024-08-18 21:04:08.182 -03:00 () [INF] Request finished HTTP/2 POST https://localhost:5002/api/v1/Network - 200 391 application/json; charset=utf-8 118.179ms

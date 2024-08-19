@@ -11,10 +11,8 @@ namespace Domain.Entities
         public string ProvinceName { get; set; }
         public Guid CountryID { get; set; }
 
-        // Navigation Property
-        //public Country Country { get; set; }
-
-        // A province can have multiple cities
-        //public IEnumerable<City> Cities { get; set; }
+        // Navigation properties
+        public Country Country { get; set; }
+        public ICollection<City> Cities { get; set; }
     }
 }

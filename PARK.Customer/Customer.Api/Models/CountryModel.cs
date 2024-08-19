@@ -1,4 +1,5 @@
 ﻿using CustomerApp.Api.Models.SeedWork;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -8,7 +9,7 @@ namespace Customer.Api.Models
     {
         public string CountryName { get; set; }
 
-        // A country can have multiple provinces
-        //public IEnumerable<Province> Provinces { get; set; }
+        // Navigation properties
+        public ICollection<ProvinceModel> Provinces { get; set; }
     }
 }

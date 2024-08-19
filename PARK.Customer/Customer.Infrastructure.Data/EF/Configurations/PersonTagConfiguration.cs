@@ -25,13 +25,15 @@ namespace Infrastructure.Data.EF.Configurations
 
 
             //// Relaciones
-            //builder.HasOne(pt => pt.Person)
-            //       .WithMany(p => p.PersonTags)
-            //       .HasForeignKey(pt => pt.PersonID);
+            builder.HasOne(pt => pt.Person)
+          .WithMany(p => p.PersonTags)
+          .HasForeignKey(pt => pt.PersonID)
+          .OnDelete(DeleteBehavior.Cascade);
 
-            //builder.HasOne(pt => pt.Tag)
-            //       .WithMany(t => t.PersonTags)
-            //       .HasForeignKey(pt => pt.TagID);
+            builder.HasOne(pt => pt.Tag)
+                   .WithMany(t => t.PersonTags)
+                   .HasForeignKey(pt => pt.TagID)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

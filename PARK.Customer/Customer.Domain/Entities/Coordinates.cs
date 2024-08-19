@@ -8,12 +8,11 @@ namespace Domain.Entities
 {
     public class Coordinates : BaseCrudEntity<Guid>
     {
-        public Guid UserAddressID { get; set; }
-        public decimal Lng { get; set; }
-        public decimal Lat { get; set; }
+        public decimal Lng { get; set; }  // Longitud
+        public decimal Lat { get; set; }  // Latitud
         public string GoogleMapsURL { get; set; }
 
-        // Navigation Property
-        //public UserAddress UserAddress { get; set; }
+        // Navigation properties
+        public UserAddress UserAddress { get; set; }
     }
 }

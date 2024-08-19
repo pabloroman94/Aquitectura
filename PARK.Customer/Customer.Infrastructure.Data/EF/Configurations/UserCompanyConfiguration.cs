@@ -9,30 +9,21 @@ namespace Infrastructure.Data.EF.Configurations
     {
         public override void Configure(EntityTypeBuilder<UserCompany> builder)
         {
-            base.Configure("USER_COMPANY", builder);  // Cambiado el nombre de la tabla base
+            base.Configure("COMPANY", builder);  // Cambiado el nombre de la tabla base
 
-            // Configuración del ID
-            builder.Property(e => e.Id)
-                   .HasColumnName("ID")
-                   .IsRequired();
 
             // Configuración del CompanyName
             builder.Property(e => e.CompanyName)
                    .HasColumnName("COMPANYNAME")
-                   .IsRequired();
+                   .IsRequired()
+                   .HasMaxLength(255); // Limitar la longitud del nombre de la compañía
 
+            // Relación uno a uno con User
+            builder.HasOne<User>()
+                   .WithOne()
+                   .HasForeignKey<UserCompany>(e => e.Id)  // FK hacia User
+                   .OnDelete(DeleteBehavior.Cascade);  // Eliminación en cascada
             
-
-            // Configuración del UserID (clave foránea)
-            //builder.Property(e => e.UserID)
-            //       .HasColumnName("USER_ID")
-            //       .IsRequired();
-
-            // Configuración de la relación con la entidad User
-            //builder.HasOne(e => e.User)
-            //       .WithMany(u => u.UserCompanies)
-            //       .HasForeignKey(e => e.UserID)
-            //       .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

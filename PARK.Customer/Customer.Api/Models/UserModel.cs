@@ -11,50 +11,26 @@ namespace Customer.Api.Models
     /// </summary>
     public class UserModel : BaseCrudEntityModel<Guid>
     {
-        /// <summary>
-        /// Nombre de usuario único utilizado para la autenticación.
-        /// </summary>
+
         public string Username { get; set; }
 
-        /// <summary>
-        /// Descripción del perfil del usuario, que podría incluir detalles personales o información sobre la empresa.
-        /// </summary>
+
         public string ProfileDescription { get; set; }
 
-        /// <summary>
-        /// Enum que indica si el usuario es una persona o una empresa.
-        /// </summary>
+
         public UserType Type { get; set; }  // Nuevo campo para identificar si es Persona o Empresa
 
+
         // Propiedades de navegación
+        //public UserPersonModel Person { get; set; }
 
-        /// <summary>
-        /// Información adicional cuando el usuario es una persona. Relaciona al usuario con la entidad 'UserPersonModel'.
-        /// </summary>
-        public UserPersonModel Person { get; set; }
+        //public UserCompanyModel Company { get; set; }
+        public ICollection<Network> Networks { get; set; }
+        // Redes sociales/enlaces del usuario
 
-        /// <summary>
-        /// Información adicional cuando el usuario es una empresa. Relaciona al usuario con la entidad 'UserCompanyModel'.
-        /// </summary>
-        public UserCompanyModel Company { get; set; }
+        //public CredentialModel Credential { get; set; }  // La credencial asociada al usuario
 
-        /// <summary>
-        /// Colección de redes sociales o enlaces asociados al usuario. 
-        /// Por ejemplo, Facebook, Instagram, página web, etc.
-        /// </summary>
-        public IEnumerable<NetworkModel> Networks { get; set; }  // Redes sociales/enlaces del usuario
-
-        /// <summary>
-        /// Información de autenticación del usuario, como nombre de usuario y contraseña.
-        /// Relaciona al usuario con la entidad 'CredentialModel'.
-        /// </summary>
-        public CredentialModel Credential { get; set; }  // La credencial asociada al usuario
-
-        /// <summary>
-        /// Colección de otros usuarios que este usuario ha marcado como favoritos.
-        /// Relaciona al usuario con la entidad 'UserFavoriteModel'.
-        /// </summary>
-        public IEnumerable<UserFavoriteModel> Favorites { get; set; }  // Lista de usuarios favoritos
+        //public IEnumerable<UserFavoriteModel> Favorites { get; set; }  // Lista de usuarios favoritos
     }
 
     /// <summary>

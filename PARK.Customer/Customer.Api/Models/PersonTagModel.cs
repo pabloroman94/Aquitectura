@@ -10,7 +10,7 @@ namespace Customer.Api.Models
         public Guid TagID { get; set; }
 
         // Navigation properties
-        //public PersonModel Person { get; set; }
-        //public TagModel Tag { get; set; }
+        public PersonModel Person { get; set; }
+        public TagModel Tag { get; set; }
     }
 }

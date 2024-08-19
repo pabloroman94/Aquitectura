@@ -23,10 +23,17 @@ namespace Infrastructure.Data.EF.Configurations
                    .HasColumnName("ProfessionID")
                    .IsRequired();
 
-            //builder.HasOne(e => e.User)
-            //       .WithMany(u => u.UserEmails)
-            //       .HasForeignKey(e => e.UserID)
-            //       .OnDelete(DeleteBehavior.Cascade);
+            // Relación con Person
+            builder.HasOne(pp => pp.UserPerson)
+                   .WithMany(p => p.PersonProfessions)
+                   .HasForeignKey(pp => pp.PersonID)
+                   .OnDelete(DeleteBehavior.Cascade);
+
+            // Relación con Profession
+            builder.HasOne(pp => pp.Profession)
+                   .WithMany(p => p.PersonProfessions)
+                   .HasForeignKey(pp => pp.ProfessionID)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

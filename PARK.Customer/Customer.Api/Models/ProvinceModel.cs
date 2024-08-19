@@ -1,4 +1,5 @@
 ﻿using CustomerApp.Api.Models.SeedWork;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Metrics;
@@ -10,10 +11,8 @@ namespace Customer.Api.Models
         public string ProvinceName { get; set; }
         public Guid CountryID { get; set; }
 
-        // Navigation Property
-        //public CountryModel Country { get; set; }
-
-        // A province can have multiple cities
-        //public IEnumerable<CityModel> Cities { get; set; }
+        // Navigation properties
+        public CountryModel Country { get; set; }
+        public ICollection<CityModel> Cities { get; set; }
     }
 }

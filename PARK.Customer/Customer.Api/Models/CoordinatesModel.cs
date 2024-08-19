@@ -1,4 +1,5 @@
 ﻿using CustomerApp.Api.Models.SeedWork;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -6,12 +7,11 @@ namespace Customer.Api.Models
 {
     public class CoordinatesModel : BaseCrudEntityModel<Guid>
     {
-        public Guid UserAddressID { get; set; }
-        public decimal Lng { get; set; }
-        public decimal Lat { get; set; }
+        public decimal Lng { get; set; }  // Longitud
+        public decimal Lat { get; set; }  // Latitud
         public string GoogleMapsURL { get; set; }
 
-        // Navigation Property
-        //public UserAddressModel UserAddress { get; set; }
+        // Navigation properties
+        public UserAddressModel UserAddress { get; set; }
     }
 }

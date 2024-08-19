@@ -24,13 +24,15 @@ namespace Infrastructure.Data.EF.Configurations
                    .IsRequired();
 
             // Relaciones
-            //builder.HasOne(ct => ct.Company)
-            //       .WithMany(c => c.CompanyTags)
-            //       .HasForeignKey(ct => ct.CompanyID);
+            builder.HasOne(ct => ct.Company)
+                   .WithMany(c => c.CompanyTags)
+                   .HasForeignKey(ct => ct.CompanyID)
+                   .OnDelete(DeleteBehavior.Cascade);  // Eliminación en cascada
 
-            //builder.HasOne(ct => ct.Tag)
-            //       .WithMany(t => t.CompanyTags)
-            //       .HasForeignKey(ct => ct.TagID);
+            builder.HasOne(ct => ct.Tag)
+                   .WithMany(t => t.CompanyTags)
+                   .HasForeignKey(ct => ct.TagID)
+                   .OnDelete(DeleteBehavior.Cascade);  // Eliminación en cascada
         }
     }
 }

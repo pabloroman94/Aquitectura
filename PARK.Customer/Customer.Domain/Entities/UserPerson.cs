@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class UserPerson : BaseCrudEntity<Guid>
+    public class UserPerson : User //:BaseCrudEntity<Guid>
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime Birthdate { get; set; }
         public string Gender { get; set; }
-        public int? ProfessionalTypeID { get; set; }  // Optional, consider removing if not in use
 
-        // Navigation properties
-        //public User User { get; set; }
-        //public IEnumerable<PersonProfession> PersonProfessions { get; set; }
-        //public IEnumerable<PersonTag> PersonTags { get; set; }
+        // Propiedades de navegación
+        public ICollection<PersonProfession> PersonProfessions { get; set; }  // Relación con las profesiones de la persona
+        public ICollection<PersonTag> PersonTags { get; set; }  // Relación con las etiquetas de la persona
     }
 }

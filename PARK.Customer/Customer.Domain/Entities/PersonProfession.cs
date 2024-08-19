@@ -11,8 +11,8 @@ namespace Domain.Entities
         public Guid PersonID { get; set; }
         public Guid ProfessionID { get; set; }
 
-        // Navigation properties
-        //public Person Person { get; set; }
-        //public Profession Profession { get; set; }
+        // Propiedades de navegación
+        public UserPerson UserPerson { get; set; }
+        public Profession Profession { get; set; }
     }
 }

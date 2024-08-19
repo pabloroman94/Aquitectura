@@ -11,7 +11,7 @@ namespace Domain.Entities
         public string TagName { get; set; }
 
         // Navigation properties
-        //public IEnumerable<PersonTag> PersonTags { get; set; }
-        //public IEnumerable<CompanyTag> CompanyTags { get; set; }
+        public ICollection<PersonTag> PersonTags { get; set; }
+        public ICollection<CompanyTag> CompanyTags { get; set; }
     }
 }

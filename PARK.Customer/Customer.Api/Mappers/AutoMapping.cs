@@ -27,11 +27,18 @@ namespace PARK.CustomerApi.Mappers
             CreateMap<UserEmailModel, Domain.Entities.UserEmail>().ReverseMap();
             CreateMap<UserPhotoModel, Domain.Entities.UserPhoto>().ReverseMap();
             CreateMap<UserModel, Domain.Entities.User>().ReverseMap();
-            CreateMap<UserPersonModel, Domain.Entities.UserPerson>().ReverseMap();
+            CreateMap<UserPersonModel, UserPerson>()
+                .ForMember(dest => dest.PersonTags, opt => opt.MapFrom(src => src.PersonTags))
+                .ReverseMap(); 
             CreateMap<UserCompanyModel, Domain.Entities.UserCompany>().ReverseMap();
             CreateMap<UserCategoryModel, Domain.Entities.UserCategory>().ReverseMap();
             CreateMap<TagModel, Domain.Entities.Tag>().ReverseMap();
-            CreateMap<PersonTagModel, Domain.Entities.PersonTag>().ReverseMap();
+            //CreateMap<PersonTagModel, Domain.Entities.PersonTag>().ReverseMap();
+            CreateMap<PersonTagModel, PersonTag>()
+            .ForMember(dest => dest.Person, opt => opt.MapFrom(src => src.Person))  // Mapear la propiedad de navegación
+            .ForMember(dest => dest.Tag, opt => opt.MapFrom(src => src.Tag))
+            .ReverseMap();
+
             CreateMap<CompanyTagModel, Domain.Entities.CompanyTag>().ReverseMap();
             CreateMap<CompanyBusinessTypeModel, Domain.Entities.CompanyBusinessType>().ReverseMap();
             CreateMap<BusinessTypeModel, Domain.Entities.BusinessType>().ReverseMap();
@@ -42,6 +49,8 @@ namespace PARK.CustomerApi.Mappers
             CreateMap<CoordinatesModel, Domain.Entities.Coordinates>().ReverseMap();
             CreateMap<NetworkModel, Domain.Entities.Network>().ReverseMap();
             CreateMap<NetworkTypeModel, Domain.Entities.NetworkType>().ReverseMap();
+            CreateMap<SubCategoryModel, Domain.Entities.SubCategory>().ReverseMap();
+            CreateMap<ClassificationModel, Domain.Entities.Classification>().ReverseMap();
 
             CreateMap<Address, Person>().ReverseMap()
                     .ForMember(d => d.StreetName, m => m.MapFrom(s => s.CustomerAddress.FirstOrDefault().StreetName))

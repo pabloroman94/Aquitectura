@@ -1,4 +1,5 @@
 ﻿using CustomerApp.Api.Models.SeedWork;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -9,7 +10,7 @@ namespace Customer.Api.Models
         public string TagName { get; set; }
 
         // Navigation properties
-        //public IEnumerable<PersonTagModel> PersonTags { get; set; }
-        //public IEnumerable<CompanyTagModel> CompanyTags { get; set; }
+        public ICollection<PersonTagModel> PersonTags { get; set; }
+        public ICollection<CompanyTag> CompanyTags { get; set; }
     }
 }

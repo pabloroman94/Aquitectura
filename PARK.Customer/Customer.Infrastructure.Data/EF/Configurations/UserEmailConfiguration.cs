@@ -5,7 +5,7 @@ using System;
 
 namespace Infrastructure.Data.EF.Configurations
 {
-    public class CoordinatesConfiguration : BaseCrudEntityConfiguration<Coordinates, Guid>
+    public class UserMailConfiguration : BaseCrudEntityConfiguration<Coordinates, Guid>
     {
         public override void Configure(EntityTypeBuilder<Coordinates> builder)
         {
@@ -15,9 +15,9 @@ namespace Infrastructure.Data.EF.Configurations
                    .HasColumnName("ID")
                    .IsRequired();
 
-            builder.Property(e => e.UserAddressID)
-                   .HasColumnName("UserAddressID")
-                   .IsRequired();
+            //builder.Property(e => e.UserAddressID)
+            //       .HasColumnName("UserAddressID")
+            //       .IsRequired();
 
             builder.Property(e => e.Lng)
                    .HasColumnName("Lng")

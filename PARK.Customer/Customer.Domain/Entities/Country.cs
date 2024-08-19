@@ -10,7 +10,7 @@ namespace Domain.Entities
     {
         public string CountryName { get; set; }
 
-        // A country can have multiple provinces
-        //public IEnumerable<Province> Provinces { get; set; }
+        // Navigation properties
+        public ICollection<Province> Provinces { get; set; }
     }
 }

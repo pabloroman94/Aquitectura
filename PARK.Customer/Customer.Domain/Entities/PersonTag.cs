@@ -12,7 +12,7 @@ namespace Domain.Entities
         public Guid TagID { get; set; }
 
         // Navigation properties
-        //public Person Person { get; set; }
-        //public Tag Tag { get; set; }
+        public UserPerson Person { get; set; }
+        public Tag Tag { get; set; }
     }
 }

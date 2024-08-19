@@ -12,8 +12,8 @@ namespace Domain.Entities
         public Guid BusinessTypeID { get; set; }
 
         // Navigation properties
-        //public Company Company { get; set; }
-        //public BusinessType BusinessType { get; set; }
+        public UserCompany Company { get; set; }
+        public BusinessType BusinessType { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CustomerApp.Api.Models.SeedWork;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -10,6 +11,6 @@ namespace Customer.Api.Models
         public string IconURL { get; set; }  // Descripción del tipo de red social (e.g., "Social Media", "Website")
 
         // Navigation property
-        //public IEnumerable<Network> Networks { get; set; }  // Una relación uno a muchos con Network
+        public ICollection<NetworkModel> Networks { get; set; }
     }
 }

@@ -9,10 +9,10 @@ namespace Domain.Entities
     public class Profession : BaseCrudEntity<Guid>
     {
         public string ProfessionName { get; set; }
-        public int CategoryID { get; set; }
+        public Guid CategoryID { get; set; }
 
         // Navigation properties
-        //public Category Category { get; set; }
-        //public IEnumerable<PersonProfession> PersonProfessions { get; set; }
+        public UserCategory Category { get; set; }
+        public ICollection<PersonProfession> PersonProfessions { get; set; }
     }
 }

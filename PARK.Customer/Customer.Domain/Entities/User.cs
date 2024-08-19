@@ -8,19 +8,13 @@ namespace Domain.Entities
 {
     public class User : BaseCrudEntity<Guid>
     {
-        /// <summary>
-        /// Nombre de usuario único utilizado para la autenticación.
-        /// </summary>
+
         public string Username { get; set; }
 
-        /// <summary>
-        /// Descripción del perfil del usuario, que podría incluir detalles personales o información sobre la empresa.
-        /// </summary>
+
         public string ProfileDescription { get; set; }
 
-        /// <summary>
-        /// Enum que indica si el usuario es una persona o una empresa.
-        /// </summary>
+
         //public UserType Type { get; set; }  // Nuevo campo para identificar si es Persona o Empresa
 
         // Propiedades de navegación
@@ -39,7 +33,9 @@ namespace Domain.Entities
         /// Colección de redes sociales o enlaces asociados al usuario. 
         /// Por ejemplo, Facebook, Instagram, página web, etc.
         /// </summary>
-        //public IEnumerable<NetworkModel> Networks { get; set; }  // Redes sociales/enlaces del usuario
+        public ICollection<Network> Networks { get; set; }
+        public ICollection<UserAddress> UserAddresses { get; set; }
+
 
         /// <summary>
         /// Información de autenticación del usuario, como nombre de usuario y contraseña.

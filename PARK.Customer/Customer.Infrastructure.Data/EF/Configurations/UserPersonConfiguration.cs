@@ -10,35 +10,37 @@ namespace Infrastructure.Data.EF.Configurations
         public override void Configure(EntityTypeBuilder<UserPerson> builder)
         {
             base.Configure("PERSON", builder);
-
-            builder.Property(e => e.Id)
-                   .HasColumnName("ID")
-                   .IsRequired();
-
+        
             builder.Property(e => e.FirstName)
                    .HasColumnName("FIRSTNAME")
+                   .HasMaxLength(255)
+                   .IsUnicode(false)
                    .IsRequired();
 
             builder.Property(e => e.LastName)
                    .HasColumnName("LASTNAME")
+                   .HasMaxLength(255)
+                   .IsUnicode(false)
                    .IsRequired();
 
             builder.Property(e => e.Birthdate)
                    .HasColumnName("BIRTHDATE")
-                   .IsRequired();
-            
-            builder.Property(e => e.Gender)
-                   .HasColumnName("GENDER")
-                   .IsRequired();
-            
-            builder.Property(e => e.ProfessionalTypeID)
-                   .HasColumnName("PROFESSIONALTYPEID")
+                   .HasColumnType("date")
                    .IsRequired();
 
-            //builder.HasOne(e => e.User)
-            //       .WithMany(u => u.UserEmails)
-            //       .HasForeignKey(e => e.UserID)
-            //       .OnDelete(DeleteBehavior.Cascade);
+            builder.Property(e => e.Gender)
+                   .HasColumnName("GENDER")
+                   .HasMaxLength(50)
+                   .IsUnicode(false)
+                   .IsRequired();
+
+
+
+            // Configuración de la clave foránea hacia la tabla User
+            builder.HasOne<User>()
+                   .WithOne()  // Relación uno a uno
+                   .HasForeignKey<UserPerson>(e => e.Id)  // FK hacia User
+                   .OnDelete(DeleteBehavior.Cascade);  // Eliminación en cascada
         }
     }
 }

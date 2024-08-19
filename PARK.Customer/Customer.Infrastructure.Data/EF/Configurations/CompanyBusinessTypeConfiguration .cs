@@ -20,18 +20,20 @@ namespace Infrastructure.Data.EF.Configurations
             builder.Property(e => e.CompanyID)
                    .HasColumnName("CompanyID")
                    .IsRequired();
-            
+
             builder.Property(e => e.BusinessTypeID)
-                   .HasColumnName("BusinessTypeID")
-                   .IsRequired();
+               .HasColumnName("BusinessTypeID")
+               .IsRequired();
 
-            //builder.HasOne(cbt => cbt.Company)
-            //   .WithMany(c => c.CompanyBusinessTypes)
-            //   .HasForeignKey(cbt => cbt.CompanyID);
+            //builder.HasOne(e => e.Company)
+            //.WithMany(c => c.CompanyTags) // Asegúrate de que esta relación esté en UserCompany
+            //.HasForeignKey(e => e.CompanyID)
+            //.OnDelete(DeleteBehavior.Cascade);
 
-            //builder.HasOne(cbt => cbt.BusinessType)
-            //       .WithMany(bt => bt.CompanyBusinessTypes)
-            //       .HasForeignKey(cbt => cbt.BusinessTypeID);
+            //builder.HasOne(e => e.BusinessType)
+            //       .WithMany(bt => bt.CompanyBusinessTypes) // Asegúrate de que esta relación esté en BusinessType
+            //       .HasForeignKey(e => e.BusinessTypeID)
+            //       .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

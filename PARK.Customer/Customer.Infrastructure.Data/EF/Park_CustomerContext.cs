@@ -39,10 +39,13 @@ namespace Infrastructure.Data.EF
         public virtual DbSet<UserAddress> UserAddresses { get; set; }
         public virtual DbSet<Street> Streets { get; set; }
         public virtual DbSet<Province> Provinces { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Coordinates> Coordinates { get; set; }
         public virtual DbSet<Network> Networks { get; set; }
         public virtual DbSet<NetworkType> NetworkTypes { get; set; }
+        public virtual DbSet<SubCategory> SubCategories { get; set; }
+        public virtual DbSet<Classification> Classification { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

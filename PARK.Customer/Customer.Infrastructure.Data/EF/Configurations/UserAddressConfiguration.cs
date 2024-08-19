@@ -11,59 +11,43 @@ namespace Infrastructure.Data.EF.Configurations
         {
             base.Configure("UserAddress", builder);
 
+            // Configuración de la clave primaria
             builder.Property(e => e.Id)
                    .HasColumnName("ID")
                    .IsRequired();
 
+            // Configuración de las propiedades
             builder.Property(e => e.UserID)
                    .HasColumnName("UserID")
                    .IsRequired();
+
             builder.Property(e => e.StreetID)
                    .HasColumnName("StreetID")
                    .IsRequired();
-            builder.Property(e => e.CityID)
-                   .HasColumnName("CityID")
-                   .IsRequired();
-            builder.Property(e => e.CountryID)
-                   .HasColumnName("CountryID")
-                   .IsRequired();
-            builder.Property(e => e.CoordinateID)
-                   .HasColumnName("CoordinateID")
-                   .IsRequired();
 
+            builder.Property(e => e.CoordinatesID)
+                   .HasColumnName("CoordinatesID")
+                   .IsRequired(false);  // Opcional
 
-            //agregame las Configuración de las relaciones
-            //builder.HasOne(e => e.User)
-            //      .WithMany(u => u.UserAddresses)
-            //      .HasForeignKey(e => e.UserID)
-            //      .OnDelete(DeleteBehavior.Cascade);
+            // Configuración de las relaciones
 
-            //builder.HasOne(e => e.Street)
-            //       .WithMany(s => s.UserAddresses)
-            //       .HasForeignKey(e => e.StreetID)
-            //       .OnDelete(DeleteBehavior.Cascade);
+            // Relación con User
+            builder.HasOne(e => e.User)
+                   .WithMany(u => u.UserAddresses)
+                   .HasForeignKey(e => e.UserID)
+                   .OnDelete(DeleteBehavior.Cascade);  // Elimina las direcciones si se elimina el usuario
 
-            //builder.HasOne(e => e.City)
-            //       .WithMany(c => c.UserAddresses)
-            //       .HasForeignKey(e => e.CityID)
-            //       .OnDelete(DeleteBehavior.Cascade);
+            // Relación con Street
+            builder.HasOne(e => e.Street)
+                   .WithMany(s => s.UserAddresses)
+                   .HasForeignKey(e => e.StreetID)
+                   .OnDelete(DeleteBehavior.Cascade);  // Elimina las direcciones si se elimina la calle
 
-            //builder.HasOne(e => e.Province)
-            //       .WithMany(p => p.UserAddresses)
-            //       .HasForeignKey(e => e.ProvinceID)
-            //       .OnDelete(DeleteBehavior.Cascade);
-
-            //builder.HasOne(e => e.Country)
-            //       .WithMany(c => c.UserAddresses)
-            //       .HasForeignKey(e => e.CountryID)
-            //       .OnDelete(DeleteBehavior.Cascade);
-
-            //builder.HasOne(e => e.Coordinates)
-            //       .WithOne(c => c.UserAddress)
-            //       .HasForeignKey<UserAddress>(e => e.CoordinateID)
-            //       .OnDelete(DeleteBehavior.Cascade);
-
+            // Relación con Coordinates (opcional)
+            builder.HasOne(e => e.Coordinates)
+                   .WithOne(c => c.UserAddress)
+                   .HasForeignKey<UserAddress>(e => e.CoordinatesID)
+                   .OnDelete(DeleteBehavior.Cascade);  // Elimina las coordenadas si se elimina la dirección
         }
     }
 }
-

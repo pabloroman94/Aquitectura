@@ -16,16 +16,20 @@ namespace Infrastructure.Data.EF.Configurations
                    .IsRequired();
 
             builder.Property(e => e.Description)
-        .HasColumnName("Description")
-        .IsRequired()
-        .HasMaxLength(255);  // Ejemplo para establecer la longitud máxima
+                .HasColumnName("Description")
+                .IsRequired()
+                .HasMaxLength(255);  // Ejemplo para establecer la longitud máxima
 
             builder.Property(e => e.IconURL)
                    .HasColumnName("IconURL")
                    .IsRequired()
                    .HasMaxLength(255);
 
-
+            // Relaciones
+            builder.HasMany(e => e.Networks)
+                   .WithOne(n => n.NetworkType)
+                   .HasForeignKey(n => n.NetworkTypeID)
+                   .OnDelete(DeleteBehavior.Cascade);
 
         }
     }

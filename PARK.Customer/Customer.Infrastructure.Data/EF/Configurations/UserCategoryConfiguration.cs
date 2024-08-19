@@ -21,10 +21,10 @@ namespace Infrastructure.Data.EF.Configurations
 
 
             // Configuración de las relaciones
-            //builder.HasMany(e => e.Professions)
-            //       .WithOne(p => p.Category)
-            //       .HasForeignKey(p => p.CategoryID)
-            //       .OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(c => c.Professions)
+                       .WithOne(p => p.Category)
+                       .HasForeignKey(p => p.CategoryID)
+                       .OnDelete(DeleteBehavior.Cascade);  // Eliminación en cascada
         }
     }
 }

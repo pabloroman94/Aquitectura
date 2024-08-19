@@ -24,10 +24,17 @@ namespace Infrastructure.Data.EF.Configurations
                    .HasColumnName("CATEGORYID")
                    .IsRequired();
 
-            //builder.HasOne(e => e.User)
-            //       .WithMany(u => u.UserEmails)
-            //       .HasForeignKey(e => e.UserID)
-            //       .OnDelete(DeleteBehavior.Cascade);
+            // Relación con Category
+            builder.HasOne(e => e.Category)
+                   .WithMany()
+                   .HasForeignKey(e => e.CategoryID)
+                   .OnDelete(DeleteBehavior.Cascade);
+
+            // Relación con PersonProfession
+            builder.HasMany(e => e.PersonProfessions)
+                   .WithOne(pp => pp.Profession)
+                   .HasForeignKey(pp => pp.ProfessionID)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

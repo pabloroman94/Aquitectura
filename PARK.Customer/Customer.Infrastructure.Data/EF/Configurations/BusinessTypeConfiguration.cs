@@ -11,28 +11,26 @@ namespace Infrastructure.Data.EF.Configurations
         {
             base.Configure("BusinessType", builder);
 
-            builder.Property(e => e.Id)
-                   .HasColumnName("ID")
-                   .IsRequired();
-
-       
             builder.Property(e => e.TypeName)
-                   .HasColumnName("TypeName")
+            .HasColumnName("TypeName")
+            .IsRequired()
+            .HasMaxLength(255); // Limitar la longitud del nombre para mayor control
+
+            builder.Property(e => e.SubCategoryID)
+                   .HasColumnName("SubCategoryID")
                    .IsRequired();
-            
-            builder.Property(e => e.CategoryID)
-                   .HasColumnName("CategoryID")
-                   .IsRequired();
 
+            // Configuración de relaciones
+            builder.HasOne(e => e.SubCategory)
+                   .WithMany(sc => sc.BusinessTypes)
+                   .HasForeignKey(e => e.SubCategoryID)
+                   .OnDelete(DeleteBehavior.Cascade);
 
-
-            //builder.HasOne(bt => bt.Category)
-            //  .WithMany(c => c.BusinessTypes)
-            //  .HasForeignKey(bt => bt.CategoryID);
-
-            //builder.HasMany(bt => bt.CompanyBusinessTypes)
-            //       .WithOne(cbt => cbt.BusinessType)
-            //       .HasForeignKey(cbt => cbt.BusinessTypeID);
+            // Configurar la relación con la tabla de clasificación si es necesario
+            //builder.HasMany(e => e.Classifications)
+            //       .WithOne(c => c.BusinessType)
+            //       .HasForeignKey(c => c.BusinessTypeID)
+            //       .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

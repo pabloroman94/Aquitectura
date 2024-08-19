@@ -13,10 +13,8 @@ namespace Domain.Entities
         public string PostalCode { get; set; }
         public Guid ProvinceID { get; set; }
 
-        // Navigation Property
-        //public Province Province { get; set; }
-
-        // A city can have multiple streets
-        //public IEnumerable<Street> Streets { get; set; }
+        // Navigation properties
+        public Province Province { get; set; }
+        public ICollection<Street> Streets { get; set; }
     }
 }

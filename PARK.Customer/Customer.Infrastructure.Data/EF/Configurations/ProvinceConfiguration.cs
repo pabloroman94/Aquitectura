@@ -11,21 +11,27 @@ namespace Infrastructure.Data.EF.Configurations
         {
             base.Configure("Province", builder);
 
+            // Configuración de la clave primaria
             builder.Property(e => e.Id)
                    .HasColumnName("ID")
                    .IsRequired();
 
+            // Configuración de la relación con Country
             builder.Property(e => e.CountryID)
                    .HasColumnName("CountryID")
                    .IsRequired();
 
+            // Configuración de la propiedad ProvinceName
             builder.Property(e => e.ProvinceName)
                    .HasColumnName("ProvinceName")
-                   .IsRequired();
-            //builder.HasOne(p => p.Country)
-            //               .WithMany(c => c.Provinces)
-            //               .HasForeignKey(p => p.CountryID)
-            //               .OnDelete(DeleteBehavior.Cascade);
+                   .IsRequired()
+                   .HasMaxLength(255);  // Establece un límite de longitud si es necesario
+
+            // Relaciones
+            builder.HasOne(p => p.Country)
+                   .WithMany(c => c.Provinces)
+                   .HasForeignKey(p => p.CountryID)
+                   .OnDelete(DeleteBehavior.Cascade);  // Si se elimina un país, se eliminan sus provincias asociadas
         }
     }
 }

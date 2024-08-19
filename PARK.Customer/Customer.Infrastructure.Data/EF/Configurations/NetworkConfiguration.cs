@@ -31,10 +31,16 @@ namespace Infrastructure.Data.EF.Configurations
                    .HasColumnName("NetworkTypeID")
                    .IsRequired();
 
-            //builder.HasOne(e => e.User)
-            //       .WithMany(u => u.UserEmails)
-            //       .HasForeignKey(e => e.UserID)
-            //       .OnDelete(DeleteBehavior.Cascade);
+            // Relaciones
+            builder.HasOne(e => e.User)
+                   .WithMany(u => u.Networks)
+                   .HasForeignKey(e => e.UserID)
+                   .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasOne(e => e.NetworkType)
+                   .WithMany(nt => nt.Networks)
+                   .HasForeignKey(e => e.NetworkTypeID)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

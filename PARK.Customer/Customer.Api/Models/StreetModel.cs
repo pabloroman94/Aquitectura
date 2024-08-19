@@ -1,4 +1,5 @@
 ﻿using CustomerApp.Api.Models.SeedWork;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -11,10 +12,8 @@ namespace Customer.Api.Models
         public string Floor { get; set; }
         public Guid CityID { get; set; }
 
-        // Navigation Property
-        //public CityModel City { get; set; }
-
-        // A street can have multiple user addresses
-        //public IEnumerable<UserAddressModel> UserAddresses { get; set; }
+        // Navigation properties
+        public CityModel City { get; set; }
+        public ICollection<UserAddressModel> UserAddresses { get; set; }
     }
 }

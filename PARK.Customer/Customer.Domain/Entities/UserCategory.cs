@@ -11,7 +11,9 @@ namespace Domain.Entities
         public string CategoryName { get; set; }
 
         // Navigation properties
-        //public IEnumerable<Profession> Professions { get; set; }
+        public ICollection<Profession> Professions { get; set; }  // Una categoría puede tener muchas profesiones
+        public ICollection<SubCategory> SubCategories { get; set; }
         //public IEnumerable<CompanyCategory> CompanyCategories { get; set; }
+
     }
 }
