@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Customer.Api.Models;
+using Customer.Api.Models.Request;
 using Domain.Entities;
 using System.Linq;
 
@@ -29,7 +30,7 @@ namespace PARK.CustomerApi.Mappers
             CreateMap<UserModel, Domain.Entities.User>().ReverseMap();
             CreateMap<UserPersonModel, UserPerson>()
                 .ForMember(dest => dest.PersonTags, opt => opt.MapFrom(src => src.PersonTags))
-                .ReverseMap(); 
+                .ReverseMap();
             CreateMap<UserCompanyModel, Domain.Entities.UserCompany>().ReverseMap();
             CreateMap<UserCategoryModel, Domain.Entities.UserCategory>().ReverseMap();
             CreateMap<TagModel, Domain.Entities.Tag>().ReverseMap();
@@ -81,6 +82,32 @@ namespace PARK.CustomerApi.Mappers
                     .ForMember(d => d.Customer, m => m.Ignore())
                     .ForMember(d => d.ContactTypes, m => m.Ignore());
 
+            CreateMap<UserPersonResponse, Domain.Entities.UserPerson>().ReverseMap();
+            CreateMap<UserPersonModel, UserPersonResponse>().ReverseMap();
+
+            //CreateMap<UserPersonRequest, Domain.Entities.UserPerson>().ReverseMap();
+            //CreateMap<UserPersonModel, UserPersonRequest>().ReverseMap();
+
+            //CreateMap<UserRequest, Domain.Entities.User>().ReverseMap();
+            //CreateMap<UserPerson, UserRequest>().ReverseMap();
+
+            CreateMap<UserPersonRequest, UserPerson>()
+               .ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.Username))
+               .ForMember(dest => dest.ProfileDescription, opt => opt.MapFrom(src => src.ProfileDescription))
+               .ForMember(dest => dest.FirstName, opt => opt.MapFrom(src => src.FirstName))
+               .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.LastName))
+               .ForMember(dest => dest.Birthdate, opt => opt.MapFrom(src => src.Birthdate))
+               .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
+               // Mapeo de las propiedades de BaseStampEntity
+               //.ForMember(dest => dest.Active, opt => opt.MapFrom(src => src.Active))
+               .ForMember(dest => dest.FInsert, opt => opt.MapFrom(src => src.FInsert))
+               .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
+               //.ForMember(dest => dest.Version, opt => opt.MapFrom(src => src.Version))
+               .ForMember(dest => dest.FUpdate, opt => opt.MapFrom(src => src.FUpdate))
+               .ForMember(dest => dest.UserNameUpdate, opt => opt.MapFrom(src => src.UserNameUpdate))
+               // Ignorar propiedades de navegación si no se van a mapear directamente desde el request
+               .ForMember(dest => dest.PersonProfessions, opt => opt.Ignore())
+               .ForMember(dest => dest.PersonTags, opt => opt.Ignore());
         }
     }
 }

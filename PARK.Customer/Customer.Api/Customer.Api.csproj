@@ -17,8 +17,6 @@
     <Compile Remove="Controllers\CustomerController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Request\" />
-    <Folder Include="Models\Response\" />
     <Folder Include="Validators\" />
   </ItemGroup>
   <ItemGroup>
