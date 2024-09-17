@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Customer.Api.Models;
+using Customer.Api.Models.Request;
 using CustomerApp.Api.CustomEntities;
 using CustomerApp.Api.Services;
 using Domain.Entities;
@@ -16,7 +17,7 @@ namespace Customer.Api.Controllers
     [ApiController]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0")]
-    public class NetworkTypeController : CrudStampController<NetworkType, Guid, NetworkTypeModel, NetworkTypeFilter>
+    public class NetworkTypeController : CrudStampController<TestResponse,NetworkType, Guid, NetworkTypeModel, NetworkTypeFilter>
     {
         public NetworkTypeController(IMapper mapper, IBaseStampAplication<NetworkType, Guid, NetworkTypeFilter> aplicacion, IUriService uriService, IOptions<PaginationOptions> options, ILogger<NetworkType> logger = null) : base(mapper, aplicacion, uriService, options, logger)
         {

@@ -10,6 +10,8 @@ namespace Domain.Entities
     {
 
         public string Username { get; set; }
+        public string ProfileImage { get; set; }
+
 
 
         public string ProfileDescription { get; set; }

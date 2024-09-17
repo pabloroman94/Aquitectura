@@ -1,8 +1,10 @@
 ﻿using Application.Aplications;
+using Customer.Infrastructure.Data.EF;
 using Domain.Entities;
 using Domain.Entities.Filters;
 using Domain.Interfaces.Aplication;
 using Domain.Interfaces.Aplication.SeedWork;
+using Domain.Interfaces.Infraestructure.Data;
 using Domain.Interfaces.Infraestructure.Data.SeedWork;
 using Infrastructure.Data.Dapper.Mappers;
 using Infrastructure.Data.Dapper.Mappers.Interfaces;
@@ -109,6 +111,9 @@ namespace Customer.Infrastructure.Ioc
 
             #region Repositories
             services.AddScoped(typeof(IBaseRepository<,,>), typeof(BaseRepository<,,>));
+            // Registro del repositorio PersonRepository
+            services.AddScoped<IPersonRepository, PersonRepository>();
+
             #endregion
 
             #region Mappers

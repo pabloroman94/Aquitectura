@@ -11,7 +11,7 @@ namespace Infrastructure.Data.EF
             : base(options)
         { }
 
-        public virtual DbSet<Customer> Customers { get; set; }
+        //public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Photo> CustomerPhotos { get; set; }
         public virtual DbSet<Mail> CustomerMails { get; set; }
         public virtual DbSet<Phone> CustomerPhones { get; set; }

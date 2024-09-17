@@ -41,6 +41,7 @@
     <Compile Remove="EF\Configurations\BonusConfiguration.cs" />
     <Compile Remove="EF\Configurations\BonusRuleConfiguration.cs" />
     <Compile Remove="EF\Configurations\BonusRuleTransactionConfiguration.cs" />
+    <Compile Remove="EF\Configurations\CustomerConfiguration.cs" />
     <Compile Remove="EF\Configurations\ParameterBonusRuleConfiguration.cs" />
     <Compile Remove="EF\Configurations\RateConfiguration.cs" />
     <Compile Remove="EF\Configurations\RateRuleConfiguration.cs" />

@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace PARK.CustomerApi.Controllers
 {
-    public abstract class CrudStampController<TEntity, TPrimaryKey, TEntityDto, TFilters> : BaseController<TEntity>
+    public abstract class CrudStampController<TResponse, TEntity, TPrimaryKey, TEntityDto, TFilters> : BaseController<TEntity>
                                                                                             where TEntity : BaseStampEntity<TPrimaryKey>
                                                                                             where TFilters : Filter
     {
@@ -109,3 +109,5 @@ namespace PARK.CustomerApi.Controllers
         }
     }
 }
+
+

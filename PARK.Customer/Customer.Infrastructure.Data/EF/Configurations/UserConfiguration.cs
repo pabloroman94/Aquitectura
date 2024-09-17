@@ -18,6 +18,10 @@ namespace Infrastructure.Data.EF.Configurations
             builder.Property(e => e.Username)
                    .HasColumnName("LOGINNAME")
                    .IsRequired();
+            
+            builder.Property(e => e.ProfileImage)
+                   .HasColumnName("PROFILEIMAGE")
+                   .IsRequired();
 
             builder.Property(e => e.ProfileDescription)
                    .HasColumnName("PROFILEDESCRIPTION")

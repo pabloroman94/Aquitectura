@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Customer.Api.Models;
+using Customer.Api.Models.Request;
 using CustomerApp.Api.CustomEntities;
 using CustomerApp.Api.Services;
 using Domain.Entities;
@@ -16,7 +17,7 @@ namespace Customer.Api.Controllers
     [ApiController]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0")]
-    public class PersonTagController : CrudStampController<PersonTag, Guid, PersonTagModel, PersonTagFilter>
+    public class PersonTagController : CrudStampController<TestResponse,PersonTag, Guid, PersonTagModel, PersonTagFilter>
     {
         public PersonTagController(IMapper mapper, IBaseStampAplication<PersonTag, Guid, PersonTagFilter> aplicacion, IUriService uriService, IOptions<PaginationOptions> options, ILogger<PersonTag> logger = null) : base(mapper, aplicacion, uriService, options, logger)
         {

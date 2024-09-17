@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Customer.Api.Models;
+using Customer.Api.Models.Request;
 using CustomerApp.Api.CustomEntities;
 using CustomerApp.Api.Services;
 using Domain.Entities.Filters;
@@ -21,7 +22,7 @@ namespace Customer.Api.Controllers
     [ApiController]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0")]
-    public class CompanyController : CrudStampController<Domain.Entities.Company, Guid, CompanyModel, CompanyFilter>
+    public class CompanyController : CrudStampController<TestResponse, Domain.Entities.Company, Guid, CompanyModel, CompanyFilter>
     {
         private readonly ICompanyAplication _companyAplication;
 

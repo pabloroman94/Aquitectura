@@ -4,6 +4,7 @@ using Domain.Interfaces.Aplication;
 using Domain.Interfaces.Aplication.SeedWork;
 using Domain.Interfaces.Infraestructure.Data.SeedWork;
 using System;
+using System.Threading.Tasks;
 
 namespace Application.Aplications
 {
@@ -13,6 +14,10 @@ namespace Application.Aplications
     {
         public NetworkAplication(IBaseRepository<Network, Guid, NetworkFilter> repository) : base(repository)
         {
+        }
+        public override ValueTask<Network> Create(Network entity)
+        {
+            return base.Create(entity);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Domain.Interfaces.Infraestructure.Data.SeedWork
@@ -8,6 +9,8 @@ namespace Domain.Interfaces.Infraestructure.Data.SeedWork
                                where T : BaseEntity<TPrimaryKey>
                                where TFilters : Filter
     {
+        IQueryable<T> GetAll();
+
         IEnumerable<T> Get(TFilters orderValue);
 
         IEnumerable<T> Get(ISpecification<T> specification = null);

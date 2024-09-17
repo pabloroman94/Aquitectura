@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces.Infraestructure.Data.SeedWork;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -21,7 +22,11 @@ namespace Infrastructure.Data.EF
             _context = context;
             _entity = context.Set<T>();
         }
-
+        public IQueryable<T> GetAll()
+        {
+            //return _entity.AsNoTracking().ToList();  // Obtiene todas las entidades sin rastreo
+            return _entity.AsQueryable();  // Devuelve un IQueryable para que puedas usar Include
+        }
         public virtual IEnumerable<T> Get(TFilters filters)
         {
             TextInfo ti = CultureInfo.CurrentCulture.TextInfo;

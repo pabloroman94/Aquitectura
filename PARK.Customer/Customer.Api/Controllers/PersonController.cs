@@ -16,13 +16,14 @@ using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using System.Linq;
+using Customer.Api.Models.Request;
 
 namespace Customer.Api.Controllers
 {
     [ApiController]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0")]
-    public class PersonController : CrudStampController<Domain.Entities.Person, Guid, PersonModel, PersonFilter>
+    public class PersonController : CrudStampController<TestResponse,Domain.Entities.Person, Guid, PersonModel, PersonFilter>
     {
         private readonly IPersonAplication _customerAplication;
 
