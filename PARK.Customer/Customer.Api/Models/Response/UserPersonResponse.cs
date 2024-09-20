@@ -14,11 +14,24 @@ namespace Customer.Api.Models.Request
         public string Gender { get; set; }
         //public string Username { get; set; }
         public string ProfileDescription { get; set; }
+        public List<string> Tags { get; set; }
+
         public ICollection<PersonProfessionResponse> PersonProfessions { get; set; }
-        public ICollection<PersonTagResponse> PersonTags { get; set; }
-        public ICollection<NetworkResponse> Networks { get; set; }
-        public ICollection<UserAddressResponse> UserAddresses { get; set; }
+        //public ICollection<PersonTagResponse> PersonTags { get; set; }
+        //public ICollection<NetworkResponse> Networks { get; set; }
+        //public ICollection<UserAddressResponse> UserAddresses { get; set; }
+        public AddressProfileResponse? AddressProfile { get; set; }
+        public ICollection<NetworkProfileResponse> NetworkProfiles { get; set; }
+
     }
+    public class NetworkProfileResponse
+    {
+        public string Title { get; set; } // Nombre de la red social (Instagram, Facebook, Twitter)
+        public string UrlIcon { get; set; } // URL del icono de la red social
+        public string ButtonColor { get; set; } // Color del botón
+        public string UrlNetwork { get; set; } // URL de la red social
+    }
+
     public class PersonProfessionResponse
     {
         public Guid Id { get; set; }
@@ -100,6 +113,17 @@ namespace Customer.Api.Models.Request
         public string GoogleMapsURL { get; set; }
     }
 
+    public class AddressProfileResponse
+    {
+        public string StreetName { get; set; }
+        public string StreetNumber { get; set; }
+        public string Floor { get; set; }
+
+        public string Country { get; set; }
+        public string Province { get; set; }
+        public string City { get; set; }
+        public string URLMaps { get; set; }
+    }
     public class TestResponse
     { }
 }

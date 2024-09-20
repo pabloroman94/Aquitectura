@@ -34,6 +34,9 @@ namespace Infrastructure.Data.EF.Configurations
                    .IsUnicode(false)
                    .IsRequired();
 
+            builder.Ignore(e => e.Tags);
+            //builder.Ignore(e => e.AddressProfile);
+
 
 
             // Configuración de la clave foránea hacia la tabla User

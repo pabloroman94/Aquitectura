@@ -241,6 +241,8 @@ namespace PARK.CustomerApi.Mappers
             .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.PersonTags.Select(pt => pt.Tag.TagName)));
 
 
+            CreateMap<AddressProfile, AddressProfileResponse>().ReverseMap();
+            CreateMap<NetworkProfile, NetworkProfileResponse>().ReverseMap();
         }
 
     }

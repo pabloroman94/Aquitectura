@@ -42,5 +42,12 @@ namespace Customer.Api.Controllers
             var response = _mapper.Map<IEnumerable<UserPersonResponse>>(userPerson);
             return response;
         }
+        [HttpGet("GetPersonById")]
+        public UserPersonResponse GetPersonById(Guid id)
+        {
+            var userPerson = _userPersonAplication.GetPersonById(id);
+            var response = _mapper.Map<UserPersonResponse>(userPerson);
+            return response;
+        }
     }
 }

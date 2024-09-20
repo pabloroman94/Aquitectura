@@ -37,6 +37,12 @@ namespace Application.Aplications
             var persons = _personRepository.GetPersonsByFilter();
             return persons;
         }
+        public UserPerson GetPersonById(Guid id)
+        {
+            var persons = _personRepository.GetPersonById(id);
+
+            return persons;
+        }
 
         public async Task<UserPerson> CreatePerson(UserPerson userPersonRequest)
         {

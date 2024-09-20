@@ -12,9 +12,10 @@ namespace Domain.Entities
         public string LastName { get; set; }
         public DateTime Birthdate { get; set; }
         public string Gender { get; set; }
-
+        public List<string>? Tags { get; set; }
         // Propiedades de navegación
         public ICollection<PersonProfession> PersonProfessions { get; set; }  // Relación con las profesiones de la persona
         public ICollection<PersonTag> PersonTags { get; set; }  // Relación con las etiquetas de la persona
     }
+    
 }
