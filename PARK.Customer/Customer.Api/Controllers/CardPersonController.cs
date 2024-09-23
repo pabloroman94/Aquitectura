@@ -39,7 +39,7 @@ namespace Customer.Api.Controllers
         [HttpGet("GetCardPersons")]
         public IEnumerable<CardPersonResponse> GetCardPersons()
         {
-            var userPerson = _userPersonAplication.GetPersonsByFilter();
+            var userPerson = _userPersonAplication.GetAllPersons();
             var response = _mapper.Map<IEnumerable<CardPersonResponse>>(userPerson);
             return response;
         }

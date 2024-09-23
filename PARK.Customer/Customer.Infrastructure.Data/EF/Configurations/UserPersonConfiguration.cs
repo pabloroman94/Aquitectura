@@ -35,6 +35,7 @@ namespace Infrastructure.Data.EF.Configurations
                    .IsRequired();
 
             builder.Ignore(e => e.Tags);
+            builder.Ignore(e => e.Professions);
             //builder.Ignore(e => e.AddressProfile);
 
 

@@ -27,6 +27,9 @@ namespace Infrastructure.Data.EF.Configurations
                    .HasColumnName("URL")
                    .IsRequired();
             
+            builder.Property(e => e.PhoneNumber)
+                   .HasColumnName("PhoneNumber");
+            
             builder.Property(e => e.NetworkTypeID)
                    .HasColumnName("NetworkTypeID")
                    .IsRequired();

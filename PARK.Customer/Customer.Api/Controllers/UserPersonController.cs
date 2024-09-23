@@ -29,16 +29,18 @@ namespace Customer.Api.Controllers
             this._userPersonAplication = userPersonAplication;
         }
         [HttpPost("CreatePerson2")]
-        public async Task<UserPerson> CreatePerson2(UserPersonRequest userPersonRequest)
+        public async Task<UserPersonResponse> CreatePerson2(UserPersonRequest userPersonRequest)
         {
             var userPerson = _mapper.Map<UserPerson>(userPersonRequest);
-            var response = await _userPersonAplication.CreatePerson(userPerson);
+            var person = await _userPersonAplication.CreatePerson(userPerson);
+            var response = _mapper.Map<UserPersonResponse>(person);
+
             return response;
         }
-        [HttpPost("GetPersonsByFilter")]
-        public IEnumerable<UserPersonResponse> GetPersonsByFilter()
+        [HttpGet("GetAllPersons")]
+        public IEnumerable<UserPersonResponse> GetAllPersons()
         {
-            var userPerson = _userPersonAplication.GetPersonsByFilter();
+            var userPerson = _userPersonAplication.GetAllPersons();
             var response = _mapper.Map<IEnumerable<UserPersonResponse>>(userPerson);
             return response;
         }

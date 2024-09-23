@@ -23,9 +23,13 @@ namespace Infrastructure.Data.EF.Configurations
                    .HasColumnName("PROFILEIMAGE")
                    .IsRequired();
 
-            builder.Property(e => e.ProfileDescription)
-                   .HasColumnName("PROFILEDESCRIPTION")
-                   .IsRequired();
+            builder.Property(e => e.ShortDescription)
+                   .HasColumnName("SHORTDESCRIPTION");
+            builder.Property(e => e.LongDescription)
+                   .HasColumnName("LONGDESCRIPTION");
+            
+            builder.Property(e => e.ProfileTitle)
+                   .HasColumnName("profile_title");
 
 
             // Relaciones

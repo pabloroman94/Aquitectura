@@ -9,7 +9,7 @@ namespace Domain.Interfaces.Aplication
     public interface IUserPersonAplication
     {
         Task<UserPerson> CreatePerson(UserPerson userPersonRequest);
-        IEnumerable<UserPerson> GetPersonsByFilter();
+        IEnumerable<UserPerson> GetAllPersons();
         UserPerson GetPersonById(Guid id);
         //IEnumerable<UserPerson> GetCardPersons();
     }

@@ -131,7 +131,7 @@ namespace PARK.CustomerApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseStaticFiles();
             app.UseSwagger();
 
             app.UseSwaggerUI(options =>
@@ -139,6 +139,8 @@ namespace PARK.CustomerApi
                 foreach (var description in provider.ApiVersionDescriptions)
                 {
                     options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+                    // Inyectar el archivo CSS personalizado
+                    options.InjectStylesheet("/swagger-ui/custom-swagger.css");
                 }
             });
 

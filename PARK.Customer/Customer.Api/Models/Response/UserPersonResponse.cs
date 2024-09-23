@@ -13,10 +13,14 @@ namespace Customer.Api.Models.Request
         public string ProfileImage { get; set; }
         public string Gender { get; set; }
         //public string Username { get; set; }
-        public string ProfileDescription { get; set; }
+        public string ShortDescription { get; set; }
+        public string ProfileTitle { get; set; }
+        public string LongDescription { get; set; }
         public List<string> Tags { get; set; }
+        public List<string> Professions { get; set; }
 
-        public ICollection<PersonProfessionResponse> PersonProfessions { get; set; }
+
+        //public ICollection<PersonProfessionResponse> PersonProfessions { get; set; }
         //public ICollection<PersonTagResponse> PersonTags { get; set; }
         //public ICollection<NetworkResponse> Networks { get; set; }
         //public ICollection<UserAddressResponse> UserAddresses { get; set; }
@@ -29,6 +33,7 @@ namespace Customer.Api.Models.Request
         public string Title { get; set; } // Nombre de la red social (Instagram, Facebook, Twitter)
         public string UrlIcon { get; set; } // URL del icono de la red social
         public string ButtonColor { get; set; } // Color del botón
+        public string PhoneNumber { get; set; } // Color del botón
         public string UrlNetwork { get; set; } // URL de la red social
     }
 

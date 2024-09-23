@@ -92,22 +92,22 @@ namespace PARK.CustomerApi.Mappers
             //CreateMap<UserRequest, Domain.Entities.User>().ReverseMap();
             //CreateMap<UserPerson, UserRequest>().ReverseMap();
 
-            CreateMap<UserPersonRequest, UserPerson>()
-               .ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.Username))
-               .ForMember(dest => dest.ProfileDescription, opt => opt.MapFrom(src => src.ProfileDescription))
-               .ForMember(dest => dest.PersonTags, opt => opt.MapFrom(src => src.PersonTags))
-               .ForMember(dest => dest.PersonProfessions, opt => opt.MapFrom(src => src.PersonProfessions))
-               .ForMember(dest => dest.FirstName, opt => opt.MapFrom(src => src.FirstName))
-               .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.LastName))
-               .ForMember(dest => dest.Birthdate, opt => opt.MapFrom(src => src.Birthdate))
-               .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
-               // Mapeo de las propiedades de BaseStampEntity
-               //.ForMember(dest => dest.Active, opt => opt.MapFrom(src => src.Active))
-               .ForMember(dest => dest.FInsert, opt => opt.MapFrom(src => src.FInsert))
-               .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
-               //.ForMember(dest => dest.Version, opt => opt.MapFrom(src => src.Version))
-               .ForMember(dest => dest.FUpdate, opt => opt.MapFrom(src => src.FUpdate))
-               .ForMember(dest => dest.UserNameUpdate, opt => opt.MapFrom(src => src.UserNameUpdate));
+            CreateMap<UserPersonRequest, UserPerson>();
+               //.ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.Username))
+               //.ForMember(dest => dest.ShortDescription, opt => opt.MapFrom(src => src.ProfileDescription))
+               //.ForMember(dest => dest.PersonTags, opt => opt.MapFrom(src => src.PersonTags))
+               //.ForMember(dest => dest.PersonProfessions, opt => opt.MapFrom(src => src.PersonProfessions))
+               //.ForMember(dest => dest.FirstName, opt => opt.MapFrom(src => src.FirstName))
+               //.ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.LastName))
+               //.ForMember(dest => dest.Birthdate, opt => opt.MapFrom(src => src.Birthdate))
+               //.ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
+               //// Mapeo de las propiedades de BaseStampEntity
+               ////.ForMember(dest => dest.Active, opt => opt.MapFrom(src => src.Active))
+               //.ForMember(dest => dest.FInsert, opt => opt.MapFrom(src => src.FInsert))
+               //.ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
+               ////.ForMember(dest => dest.Version, opt => opt.MapFrom(src => src.Version))
+               //.ForMember(dest => dest.FUpdate, opt => opt.MapFrom(src => src.FUpdate))
+               //.ForMember(dest => dest.UserNameUpdate, opt => opt.MapFrom(src => src.UserNameUpdate));
             // Ignorar propiedades de navegación si no se van a mapear directamente desde el request
             //.ForMember(dest => dest.PersonProfessions, opt => opt.Ignore())
             //.ForMember(dest => dest.PersonTags, opt => opt.Ignore());
@@ -236,13 +236,16 @@ namespace PARK.CustomerApi.Mappers
             .ForMember(dest => dest.FirstName, opt => opt.MapFrom(src => src.FirstName))
             .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.LastName))
             .ForMember(dest => dest.Professions, opt => opt.MapFrom(src => src.PersonProfessions.Select(pt => pt.Profession.ProfessionName)))
-            .ForMember(dest => dest.ShortDescription, opt => opt.MapFrom(src => src.ProfileDescription))
+            .ForMember(dest => dest.ShortDescription, opt => opt.MapFrom(src => src.ShortDescription))
                 .ForMember(dest => dest.ProfileImage, opt => opt.MapFrom(src => src.ProfileImage))
             .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.PersonTags.Select(pt => pt.Tag.TagName)));
 
 
             CreateMap<AddressProfile, AddressProfileResponse>().ReverseMap();
             CreateMap<NetworkProfile, NetworkProfileResponse>().ReverseMap();
+            
+            CreateMap<AddressProfile, AddressProfileRequest>().ReverseMap();
+            CreateMap<NetworkProfile, NetworkProfileRequest>().ReverseMap();
         }
 
     }

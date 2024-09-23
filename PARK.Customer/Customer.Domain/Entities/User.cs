@@ -14,8 +14,10 @@ namespace Domain.Entities
         public string ProfileImage { get; set; }
 
 
+        public string ProfileTitle { get; set; }
 
-        public string ProfileDescription { get; set; }
+        public string ShortDescription { get; set; }
+        public string LongDescription { get; set; }
 
 
         //public UserType Type { get; set; }  // Nuevo campo para identificar si es Persona o Empresa
@@ -72,6 +74,7 @@ namespace Domain.Entities
         public string Title { get; set; } // Nombre de la red social (Instagram, Facebook, Twitter)
         public string UrlIcon { get; set; } // URL del icono de la red social
         public string ButtonColor { get; set; } // Color del botón
+        public string PhoneNumber { get; set; } // Color del botón
         public string UrlNetwork { get; set; } // URL de la red social
     }
 

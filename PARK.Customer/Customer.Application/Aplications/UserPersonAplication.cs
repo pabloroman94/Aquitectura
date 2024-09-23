@@ -32,9 +32,9 @@ namespace Application.Aplications
             _personRepository = personRepository;
 
         }
-        public IEnumerable<UserPerson> GetPersonsByFilter()
+        public IEnumerable<UserPerson> GetAllPersons()
         {
-            var persons = _personRepository.GetPersonsByFilter();
+            var persons = _personRepository.GetAllPersons();
             return persons;
         }
         public UserPerson GetPersonById(Guid id)
@@ -58,75 +58,81 @@ namespace Application.Aplications
 
             // Asignación del código
             userPersonRequest.Code = "123456";
+            
+            var tags = _personRepository.GetTags(userPersonRequest.Tags);
+            userPersonRequest.PersonTags = CreatePersonTags(currentDate, defaultUserName, tags);
 
-            // Creación de listas con métodos auxiliares para evitar duplicación
-            userPersonRequest.PersonTags = CreatePersonTags(currentDate, defaultUserName, userPersonRequest.PersonTags);
-            userPersonRequest.PersonProfessions = CreatePersonProfessions(currentDate, defaultUserName, defaultCode, userPersonRequest.PersonProfessions);
-            userPersonRequest.Networks = CreateNetworks(currentDate, defaultUserName, defaultCode, userPersonRequest.Networks);
-            userPersonRequest.UserAddresses = CreateUserAddresses(currentDate, defaultUserName, defaultCode, userPersonRequest.UserAddresses);
+            var professions = _personRepository.GetProfessions(userPersonRequest.Professions);
+            userPersonRequest.PersonProfessions = CreatePersonProfessions(currentDate, defaultUserName, professions);
+            
+
+            //userPersonRequest.UserAddresses = CreateUserAddresses(currentDate, defaultUserName, defaultCode, userPersonRequest.UserAddresses);
 
             // Llamar al método base para crear el objeto
             var createdUserPerson = await base.Create(userPersonRequest);
 
+            var networks = _personRepository.GetNetworks(userPersonRequest.NetworkProfiles, createdUserPerson.Id);
+            userPersonRequest.Networks = networks;//CreateNetworks(currentDate, defaultUserName, defaultCode, networks);
 
-            var userPersonWithRelations = base._repositorio.Get(new UserPersonSpecification(createdUserPerson.Id));
+            var addresses = _personRepository.GetUserAddresses(userPersonRequest.AddressProfile, createdUserPerson.Id);
+            userPersonRequest.UserAddresses = addresses;//CreateNetworks(currentDate, defaultUserName, defaultCode, networks);
+
+            //var userPersonWithRelations = base._repositorio.Get(new UserPersonSpecification(createdUserPerson.Id));
+            var persons = _personRepository.GetPersonById(createdUserPerson.Id);
 
 
-            return userPersonWithRelations.FirstOrDefault();
+            return persons;
 
             //return createdUserPerson;
         }
 
         // Métodos auxiliares para crear los objetos anidados
-        private ICollection<PersonTag> CreatePersonTags(DateTime currentDate, string userName, ICollection<PersonTag> personTags)
+        private ICollection<PersonTag> CreatePersonTags(DateTime currentDate, string userName, ICollection<Tag> Tags)
         {
-            foreach (var item in personTags)
+            // Inicializamos la lista de personTags
+            List<PersonTag> personTags = new List<PersonTag>();
+
+            // Iteramos sobre la colección de Tags
+            foreach (var item in Tags)
             {
-                item.FInsert = currentDate;
-                item.UserName = userName;
-                item.FUpdate = currentDate;
-                item.UserNameUpdate = userName;
-                item.Code = string.Empty;
+                // Añadimos un nuevo PersonTag a la lista
+                personTags.Add(new PersonTag
+                {
+                    FInsert = currentDate,
+                    UserName = userName,
+                    FUpdate = currentDate,
+                    UserNameUpdate = userName,
+                    Code = string.Empty,
+                    TagID = item.Id
+                });
             }
+
             return personTags;
-            //return new List<PersonTag>
-            //{
-            //    new PersonTag
-            //    {
-            //        FInsert = currentDate,
-            //        UserName = userName,
-            //        FUpdate = currentDate,
-            //        UserNameUpdate = userName,
-            //        Code = string.Empty,  // Si el código no es necesario, puede estar vacío o en constante
-            //        TagID = new Guid("08dcbf02-3811-4a3e-83b5-da93f0603c38")
-            //    }
-            //};
         }
 
-        private ICollection<PersonProfession> CreatePersonProfessions(DateTime currentDate, string userName, string code, ICollection<PersonProfession> personProfessions)
+        private ICollection<PersonProfession> CreatePersonProfessions(DateTime currentDate, string userName, ICollection<Profession> professions)
         {
-            foreach (var item in personProfessions)
+            // Inicializamos la lista de PersonProfession
+            List<PersonProfession> personProfessions = new List<PersonProfession>();
+
+            // Iteramos sobre la colección de Professions
+            foreach (var profession in professions)
             {
-                item.FInsert = currentDate;
-                item.UserName = userName;
-                item.FUpdate = currentDate;
-                item.UserNameUpdate = userName;
-                item.Code = string.Empty;
+                // Añadimos un nuevo PersonProfession a la lista
+                personProfessions.Add(new PersonProfession
+                {
+                    FInsert = currentDate,
+                    UserName = userName,
+                    FUpdate = currentDate,
+                    UserNameUpdate = userName,
+                    Code = string.Empty,
+                    ProfessionID = profession.Id // Usamos el ID de la profesión
+                });
             }
+
             return personProfessions;
-            //return new List<PersonProfession>
-            //{
-            //    new PersonProfession
-            //    {
-            //        FInsert = currentDate,
-            //        UserName = userName,
-            //        FUpdate = currentDate,
-            //        UserNameUpdate = userName,
-            //        Code = code,
-            //        ProfessionID = new Guid("08dcbef4-12e7-414f-8d43-da3a1ac2f85c")
-            //    }
-            //};
         }
+
 
         private ICollection<Network> CreateNetworks(DateTime currentDate, string userName, string code, ICollection<Network> networks)
         {
